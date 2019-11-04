@@ -1,13 +1,13 @@
-package com.example.upeers.ui.notifications
+package com.example.upeers.ui.message
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class NotificationsViewModel : ViewModel() {
+class MessageViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "This is notifications Fragment"
+        value = "This is message Fragment"
     }
     val text: LiveData<String> = _text
 }
