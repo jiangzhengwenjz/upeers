@@ -15,10 +15,17 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
     }
 
+    fun onClickTemporaryButton(view: View) {
+        val intent = Intent(this, MainNaviActivity::class.java).apply {
+        }
+        startActivity(intent)
+    }
+  
     fun goToMessage(view: View) {
         val intent = Intent(this, Message::class.java).apply {
 
         }
         startActivity(intent)
     }
+
 }

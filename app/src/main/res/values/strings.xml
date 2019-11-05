@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">UPeers</string>
+    <string name="title_activity_main_navi">MainNaviActivity</string>
+    <string name="title_1_home">Course list</string>
+    <string name="title_2_message">Messages</string>
+    <string name="title_3_account">Account</string>
+    <string name="add_new_course">Add a new course!</string>
     <string name="action_search">Search</string>
 </resources>
