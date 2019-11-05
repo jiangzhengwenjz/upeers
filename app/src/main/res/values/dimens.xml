@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_top">4dp</dimen>
+    <dimen name="margin_left">8dp</dimen>
+    <dimen name="avatar_dimen">100dp</dimen>
+</resources>
+
