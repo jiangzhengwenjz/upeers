@@ -11,8 +11,11 @@ import androidx.navigation.ui.setupWithNavController
 class MainNaviActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
+        //every activity starts with this 2
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_navi)
+
         val navView: BottomNavigationView = findViewById(R.id.nav_view)
 
         val navController = findNavController(R.id.nav_host_fragment)
