@@ -25,7 +25,7 @@ class MessageFragment : Fragment() {
 
         messageViewModel =
             ViewModelProviders.of(this).get(MessageViewModel::class.java)
-        val root = inflater.inflate(R.layout.activity_message, container, false)
+        val root = inflater.inflate(R.layout.fragment_message, container, false)
 
         viewManager = LinearLayoutManager(activity)
         viewAdapter = MessageUserInfoAdapter(messageViewModel.mydata)

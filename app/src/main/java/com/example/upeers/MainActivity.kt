@@ -20,12 +20,6 @@ class MainActivity : AppCompatActivity() {
         }
         startActivity(intent)
     }
-  
-    fun goToMessage(view: View) {
-        val intent = Intent(this, Message::class.java).apply {
 
-        }
-        startActivity(intent)
-    }
 
 }

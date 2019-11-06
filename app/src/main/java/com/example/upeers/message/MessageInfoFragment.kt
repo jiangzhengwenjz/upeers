@@ -11,7 +11,6 @@ import android.view.View
 import android.view.ViewGroup
 
 import com.example.upeers.R
-import com.google.android.gms.plus.PlusOneButton
 
 /**
  * A fragment with a Google +1 button.
@@ -38,7 +37,7 @@ class MessageInfoFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.activity_message, container, false)
+        val view = inflater.inflate(R.layout.fragment_message, container, false)
 
         //Find the +1 button
 //        mPlusOneButton = view.findViewById<View>(R.id.plus_one_button) as PlusOneButton

@@ -19,7 +19,7 @@ class Message : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_message)
+        setContentView(R.layout.fragment_message)
 
         // toolbar
 //        setSupportActionBar(findViewById(R.id.msg_toolbar))
