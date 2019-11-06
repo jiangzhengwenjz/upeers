@@ -4,13 +4,12 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.SearchView
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.upeers.R
 import androidx.recyclerview.widget.RecyclerView
-import java.time.Instant
-import java.time.LocalDateTime
-import java.time.LocalTime
-import java.time.format.DateTimeFormatter
+import com.example.upeers.ui.message.MessageUserInfo
+import com.example.upeers.ui.message.MessageUserInfoAdapter
 import java.util.*
 
 class Message : AppCompatActivity() {
@@ -23,19 +22,19 @@ class Message : AppCompatActivity() {
         setContentView(R.layout.activity_message)
 
         // toolbar
-        setSupportActionBar(findViewById(R.id.msg_toolbar))
+//        setSupportActionBar(findViewById(R.id.msg_toolbar))
         // Get a support ActionBar corresponding to this toolbar and enable the Up button
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+//        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         val mydata = listOf<MessageUserInfo>(
             MessageUserInfo(
-                    "tutor",
-            "Alex Bradley",
-            true,
-            "Alex: Hello!",
-            Date(),
-            R.drawable.alex
-        ),
+                "tutor",
+                "Alex Bradley",
+                true,
+                "Alex: Hello!",
+                Date(),
+                R.drawable.alex
+            ),
             MessageUserInfo(
                 "tutor",
                 "Alex Bradley",
@@ -71,7 +70,7 @@ class Message : AppCompatActivity() {
         )
 
         viewManager = LinearLayoutManager(this)
-        viewAdapter = MessageUserInfoAdapter(this, mydata)
+        viewAdapter = MessageUserInfoAdapter(mydata)
 
         recyclerView = findViewById<RecyclerView>(R.id.msg_recycler_view).apply {
             setHasFixedSize(true)
@@ -94,6 +93,11 @@ class Message : AppCompatActivity() {
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.toolbar_menu, menu)
-        return true
+        val searchItem = menu?.findItem(R.id.action_search)
+        val searchView = searchItem?.actionView as SearchView
+
+        // Configure the search info and add any event listeners...
+
+        return super.onCreateOptionsMenu(menu)
     }
 }

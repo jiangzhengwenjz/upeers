@@ -1,4 +1,4 @@
-package com.example.upeers.message
+package com.example.upeers.ui.message
 
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
