@@ -8,11 +8,6 @@ import java.util.*
 
 class MessageViewModel : ViewModel() {
 
-    private val _text = MutableLiveData<String>().apply {
-        value = "This is message Fragment"
-    }
-    val text: LiveData<String> = _text
-
     val mydata = listOf<MessageUserInfo>(
         MessageUserInfo(
             "tutor",
