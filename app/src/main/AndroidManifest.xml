@@ -15,6 +15,7 @@
         <activity
             android:name=".MainNaviActivity"
             android:label="@string/title_activity_main_navi"
+            android:theme="@style/AppTheme_NoActionBar"
             android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
