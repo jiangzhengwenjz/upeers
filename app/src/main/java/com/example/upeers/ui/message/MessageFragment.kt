@@ -1,9 +1,8 @@
 package com.example.upeers.ui.message
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
+import androidx.core.app.ActivityCompat.invalidateOptionsMenu
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -42,6 +41,14 @@ class MessageFragment : Fragment() {
 //        messageViewModel.text.observe(this, Observer {
 //            textView.text = it
 //        })
+
+        activity?.invalidateOptionsMenu()
+        setHasOptionsMenu(true);
         return root
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater.inflate(R.menu.toolbar_menu, menu)
     }
 }
