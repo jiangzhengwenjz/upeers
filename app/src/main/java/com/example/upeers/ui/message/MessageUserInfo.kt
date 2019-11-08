@@ -4,7 +4,7 @@ import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 import java.util.*
 
-class MessageUserInfo(
+open class MessageUserInfo(
     val label: String,
     val name: String,
     val active: Boolean,

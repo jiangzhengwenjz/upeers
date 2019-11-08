@@ -8,10 +8,10 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.upeers.R
 
-class MessageUserInfoAdapter(private val myDataSet: List<MessageUserInfo>) :
+open class MessageUserInfoAdapter(private val myDataSet: List<MessageUserInfo>) :
     RecyclerView.Adapter<MessageUserInfoAdapter.MessageUserInfoViewHolder>(){
 
-    class MessageUserInfoViewHolder(val userInfoView: View)  : RecyclerView.ViewHolder(userInfoView) {
+    open class MessageUserInfoViewHolder(val userInfoView: View)  : RecyclerView.ViewHolder(userInfoView) {
         val label: TextView = userInfoView.findViewById(R.id.label)
         val username: TextView = userInfoView.findViewById(R.id.username)
         val active: TextView = userInfoView.findViewById(R.id.active)

@@ -1,5 +1,6 @@
 package com.example.upeers
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -10,6 +11,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.example.upeers.msgsearch.MsgSearchActivity
 
 class MainNaviActivity : AppCompatActivity() {
 
@@ -43,6 +45,9 @@ class MainNaviActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
         R.id.action_search -> {
+            val intent = Intent(this, MsgSearchActivity::class.java).apply {
+            }
+            startActivity(intent)
             true
         }
 
