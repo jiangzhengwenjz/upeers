@@ -6,22 +6,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:theme="@style/AppTheme_NoActionBar"
-    tools:context=".message.Message">
-
-<!--    <androidx.appcompat.widget.Toolbar-->
-<!--        android:id="@+id/msg_toolbar"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="?android:attr/actionBarSize"-->
-<!--        android:background="@color/colorPrimary"-->
-<!--        android:elevation="4dp"-->
-<!--        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"-->
-<!--        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"-->
-<!--        app:title="Message"/>-->
-
+    tools:context=".ui.">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/msg_recycler_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:layout_editor_absoluteX="0dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

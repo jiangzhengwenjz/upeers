@@ -7,13 +7,6 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.upeers.R
 
-//class CourseInfo(
-//    val courseSubject: String,
-//    val courseNumber: Int,
-//    val teacherName: String,
-//    val year: Int,
-//    val isFall: Boolean
-//) {}
 class CourseInfoAdapter (private val myDataSet: List<CourseInfo>):
         RecyclerView.Adapter<CourseInfoAdapter.CourseInfoViewHolder>() {
 
@@ -24,9 +17,7 @@ class CourseInfoAdapter (private val myDataSet: List<CourseInfo>):
         val year: TextView = CourseInfoView.findViewById(R.id.year)
         val semester: TextView = CourseInfoView.findViewById(R.id.semester)
         val courseName: TextView = CourseInfoView.findViewById(R.id.course_name)
-
     }
-
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CourseInfoViewHolder {
         val cardView = LayoutInflater.from(parent.context)
@@ -46,7 +37,7 @@ class CourseInfoAdapter (private val myDataSet: List<CourseInfo>):
         holder.courseName.text = myDataSet[position].courseName
 
         // need to set image here
-//        holder.avatar.setImageResource(myDataSet[position].avatar)    }
+        // holder.avatar.setImageResource(myDataSet[position].avatar)
     }
 
     override fun getItemCount(): Int {

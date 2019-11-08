@@ -4,9 +4,6 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import com.example.upeers.message.Message
-
-const val EXTRA_MSG = "com.example.message.Message"
 
 class MainActivity : AppCompatActivity() {
 
