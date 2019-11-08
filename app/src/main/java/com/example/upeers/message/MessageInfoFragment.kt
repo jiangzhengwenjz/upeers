@@ -115,3 +115,4 @@ class MessageInfoFragment : Fragment() {
     }
 
 }// Required empty public constructor
+

@@ -7,14 +7,14 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.upeers.R
 
-//class CourseItem(
+//class CourseInfo(
 //    val courseSubject: String,
 //    val courseNumber: Int,
 //    val teacherName: String,
 //    val year: Int,
 //    val isFall: Boolean
 //) {}
-class CourseInfoAdapter (private val myDataSet: List<CourseItem>):
+class CourseInfoAdapter (private val myDataSet: List<CourseInfo>):
         RecyclerView.Adapter<CourseInfoAdapter.CourseInfoViewHolder>() {
 
     class CourseInfoViewHolder(val CourseInfoView: View): RecyclerView.ViewHolder(CourseInfoView) {

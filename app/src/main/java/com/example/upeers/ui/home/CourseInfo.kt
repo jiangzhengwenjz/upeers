@@ -1,6 +1,6 @@
 package com.example.upeers.ui.home
 
-class CourseItem(
+class CourseInfo(
     val courseSubject: String,
     val courseNumber: Int,
     val teacherName: String,
