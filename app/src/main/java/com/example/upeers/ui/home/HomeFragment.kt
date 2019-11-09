@@ -41,7 +41,6 @@ class HomeFragment : Fragment() {
             adapter = viewAdapter
         }
 
-
         return root
     }
 }
