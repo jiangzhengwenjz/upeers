@@ -4,9 +4,6 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import com.example.upeers.message.Message
-
-const val EXTRA_MSG = "com.example.message.Message"
 
 class MainActivity : AppCompatActivity() {
 
@@ -20,12 +17,4 @@ class MainActivity : AppCompatActivity() {
         }
         startActivity(intent)
     }
-  
-    fun goToMessage(view: View) {
-        val intent = Intent(this, Message::class.java).apply {
-
-        }
-        startActivity(intent)
-    }
-
 }

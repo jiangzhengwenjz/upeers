@@ -1,9 +1,8 @@
 package com.example.upeers.ui.message
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
+import androidx.core.app.ActivityCompat.invalidateOptionsMenu
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -25,7 +24,7 @@ class MessageFragment : Fragment() {
 
         messageViewModel =
             ViewModelProviders.of(this).get(MessageViewModel::class.java)
-        val root = inflater.inflate(R.layout.activity_message, container, false)
+        val root = inflater.inflate(R.layout.fragment_message, container, false)
 
         viewManager = LinearLayoutManager(activity)
         viewAdapter = MessageUserInfoAdapter(messageViewModel.mydata)
@@ -38,10 +37,18 @@ class MessageFragment : Fragment() {
             adapter = viewAdapter
         }
 
-//        val userInfoListView: RecyclerView = root.findViewById(R.id.msg_recycler_view)
-//        messageViewModel.text.observe(this, Observer {
-//            textView.text = it
-//        })
+        // val userInfoListView: RecyclerView = root.findViewById(R.id.msg_recycler_view)
+        // messageViewModel.text.observe(this, Observer {
+        //     textView.text = it
+        // })
+
+        activity?.invalidateOptionsMenu()
+        setHasOptionsMenu(true);
         return root
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater.inflate(R.menu.toolbar_menu, menu)
     }
 }
