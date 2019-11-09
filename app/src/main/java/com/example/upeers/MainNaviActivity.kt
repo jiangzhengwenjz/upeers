@@ -36,11 +36,11 @@ class MainNaviActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
 
-//        // my_child_toolbar is defined in the layout file
-//        setSupportActionBar(findViewById(R.id.msg_toolbar))
-//
-//        // Get a support ActionBar corresponding to this toolbar and enable the Up button
-//        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        // // my_child_toolbar is defined in the layout file
+        // setSupportActionBar(findViewById(R.id.msg_toolbar))
+
+        // // Get a support ActionBar corresponding to this toolbar and enable the Up button
+        // supportActionBar?.setDisplayHomeAsUpEnabled(true)
     }
 
     override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
@@ -56,13 +56,13 @@ class MainNaviActivity : AppCompatActivity() {
         }
     }
 
-//    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-//        menuInflater.inflate(R.menu.toolbar_menu, menu)
-//        val searchItem = menu?.findItem(R.id.action_search)
-//        val searchView = searchItem?.actionView as SearchView
-//
-//        // Configure the search info and add any event listeners...
+    // override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+    //     menuInflater.inflate(R.menu.toolbar_menu, menu)
+    //     val searchItem = menu?.findItem(R.id.action_search)
+    //     val searchView = searchItem?.actionView as SearchView
 
-//        return super.onCreateOptionsMenu(menu)
-//    }
+    //     // Configure the search info and add any event listeners...
+
+    //     return super.onCreateOptionsMenu(menu)
+    // }
 }

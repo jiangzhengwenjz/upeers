@@ -24,11 +24,6 @@ class MsgSearchActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_msg_search)
 
-//        if (Intent.ACTION_SEARCH == intent.action) {
-//        }
-//        intent.getStringExtra(SearchManager.QUERY)?.also { query ->
-//        }
-
         doMySearch(SearchManager.QUERY)
 
         setSupportActionBar(findViewById(R.id.msg_toolbar))
@@ -101,14 +96,13 @@ class MsgSearchActivity : AppCompatActivity() {
 
     }
 
-//    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-//        menuInflater.inflate(R.menu.search_view, menu)
-//        val searchItem = menu.findItem(R.id.menu_search)
-//
-//        //通过MenuItem得到SearchView
-//        mSearchView = MenuItemCompat.getActionView(searchItem) as SearchView
-//
-//        return super.onCreateOptionsMenu(menu)
-//    }
-
+    // override fun onCreateOptionsMenu(menu: Menu): Boolean {
+    //     menuInflater.inflate(R.menu.search_view, menu)
+    //     val searchItem = menu.findItem(R.id.menu_search)
+    //
+    //     //get SearchView via MenuItem
+    //     mSearchView = MenuItemCompat.getActionView(searchItem) as SearchView
+    //
+    //     return super.onCreateOptionsMenu(menu)
+    // }
 }

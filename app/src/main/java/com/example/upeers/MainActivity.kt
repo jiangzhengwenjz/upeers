@@ -18,11 +18,9 @@ class MainActivity : AppCompatActivity() {
         }
         startActivity(intent)
     }
-
     fun onClickTemporaryButton2(view: View) {
         val intent = Intent(this, CoursePageActivity::class.java).apply {
         }
         startActivity(intent)
     }
-
 }
