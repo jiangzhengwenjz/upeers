@@ -51,7 +51,7 @@ class MsgSearchActivity : AppCompatActivity() {
                 "Alex: Hello!",
                 Date(),
                 R.drawable.alex,
-                listOf("a", "b")
+                listOf<String>("a", "bbbb", "ccccc")
             ),
             MsgSearchResultInfo(
                 "tutor",
