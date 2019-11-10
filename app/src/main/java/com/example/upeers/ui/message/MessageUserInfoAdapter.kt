@@ -10,7 +10,6 @@ import android.widget.TextView
 import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.upeers.R
-import com.example.upeers.message.Message
 import com.example.upeers.msglist.MessageListActivity
 import kotlinx.android.synthetic.main.layout_message_contact_card.view.*
 
