@@ -58,20 +58,10 @@ class MainNaviActivity : AppCompatActivity() {
         }
     }
 
-    // override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-    //     menuInflater.inflate(R.menu.toolbar_menu, menu)
-    //     val searchItem = menu?.findItem(R.id.action_search)
-    //     val searchView = searchItem?.actionView as SearchView
-
-    //     // Configure the search info and add any event listeners...
-
-//        return super.onCreateOptionsMenu(menu)
-//    }
 
     fun onClickMsgUserCard(view: View) {
         val intent = Intent(this, MessageListActivity::class.java).apply {
             // should use putExtra here I guess
-//                val remoteUserName = it.username.text
         }
         startActivity(intent)
     }
