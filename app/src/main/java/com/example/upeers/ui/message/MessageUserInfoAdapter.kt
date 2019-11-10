@@ -30,9 +30,6 @@ open class MessageUserInfoAdapter(private val myDataSet: List<MessageUserInfo>, 
         val cardView = LayoutInflater.from(parent.context)
             .inflate(R.layout.layout_message_contact_card, parent, false) as View
 
-//        cardView.setOnClickListener {
-//        }
-
         return MessageUserInfoViewHolder(
             cardView
         )
