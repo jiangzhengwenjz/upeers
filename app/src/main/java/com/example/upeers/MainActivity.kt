@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import com.example.upeers.ui.login.LoginActivity
 import com.example.upeers.ui.login.RegisterActivity
+import com.example.upeers.msglist.MessageListActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -21,4 +22,6 @@ class MainActivity : AppCompatActivity() {
     fun onClickSignUp(view: View) {
         startActivity(Intent(this, RegisterActivity::class.java).apply {})
     }
+
+
 }
