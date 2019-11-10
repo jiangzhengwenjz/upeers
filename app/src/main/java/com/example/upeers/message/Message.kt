@@ -70,7 +70,7 @@ class Message : AppCompatActivity() {
         )
 
         viewManager = LinearLayoutManager(this)
-        viewAdapter = MessageUserInfoAdapter(mydata)
+        viewAdapter = MessageUserInfoAdapter(mydata, this)
 
         recyclerView = findViewById<RecyclerView>(R.id.msg_recycler_view).apply {
             setHasFixedSize(true)

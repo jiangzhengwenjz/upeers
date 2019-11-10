@@ -33,16 +33,6 @@ class MsgSearchResultInfoAdaptor(private val myDataSet: List<MsgSearchResultInfo
     }
 
     override fun onBindViewHolder(holder: MsgSearchResultInfoViewHolder, position: Int) {
-//        holder.label.text = myDataSet[position].label
-//        holder.username.text = myDataSet[position].name
-//        holder.active.text = if (myDataSet[position].active) {
-//            "active"
-//        } else {
-//            "away"
-//        }
-//        holder.lastMessage.text = myDataSet[position].lastMsg
-//        // need to set image here
-//        holder.avatar.setImageResource(myDataSet[position].avatar)
         holder.label.text = myDataSet[position].label
         holder.username.text = myDataSet[position].name
         holder.active.text = if (myDataSet[position].active) {

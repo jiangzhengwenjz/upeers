@@ -1,14 +1,20 @@
 package com.example.upeers.ui.message
 
+import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.upeers.R
+import com.example.upeers.message.Message
+import com.example.upeers.msglist.MessageListActivity
+import kotlinx.android.synthetic.main.layout_message_contact_card.view.*
 
-open class MessageUserInfoAdapter(private val myDataSet: List<MessageUserInfo>) :
+open class MessageUserInfoAdapter(private val myDataSet: List<MessageUserInfo>, private val context: Context?) :
     RecyclerView.Adapter<MessageUserInfoAdapter.MessageUserInfoViewHolder>(){
 
     open class MessageUserInfoViewHolder(val userInfoView: View)  : RecyclerView.ViewHolder(userInfoView) {
@@ -24,6 +30,9 @@ open class MessageUserInfoAdapter(private val myDataSet: List<MessageUserInfo>) 
         // Create New View
         val cardView = LayoutInflater.from(parent.context)
             .inflate(R.layout.layout_message_contact_card, parent, false) as View
+
+//        cardView.setOnClickListener {
+//        }
 
         return MessageUserInfoViewHolder(
             cardView
