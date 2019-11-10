@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import android.widget.SearchView
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
@@ -11,6 +12,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.example.upeers.msglist.MessageListActivity
 import com.example.upeers.msgsearch.MsgSearchActivity
 
 class MainNaviActivity : AppCompatActivity() {
@@ -56,13 +58,11 @@ class MainNaviActivity : AppCompatActivity() {
         }
     }
 
-    // override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-    //     menuInflater.inflate(R.menu.toolbar_menu, menu)
-    //     val searchItem = menu?.findItem(R.id.action_search)
-    //     val searchView = searchItem?.actionView as SearchView
 
-    //     // Configure the search info and add any event listeners...
-
-    //     return super.onCreateOptionsMenu(menu)
-    // }
+    fun onClickMsgUserCard(view: View) {
+        val intent = Intent(this, MessageListActivity::class.java).apply {
+            // should use putExtra here I guess
+        }
+        startActivity(intent)
+    }
 }
