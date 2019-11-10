@@ -9,6 +9,25 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity
+            android:name=".cs5115SellTextbook"
+            android:label="@string/title_activity_cs5115_sell_textbook"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".cs5115Textbook1Details"
+            android:label="@string/title_activity_cs5115_textbook1_details"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".cs5115TextbookWishlist"
+            android:label="@string/title_activity_cs5115_textbook_wishlist"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".csci5115Textbook1Buy" />
+        <activity
+            android:name=".cs5115Textbook1Buy"
+            android:label="@string/title_activity_cs5115_textbook1_buy"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".csci5115BuyTextbook" />
+        <activity android:name=".TextbookMainActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
