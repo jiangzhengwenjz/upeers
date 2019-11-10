@@ -32,14 +32,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.upeers.MainActivity" />
         </activity>
-        <activity
-            android:name=".message.Message"
-            android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme_NoActionBar">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
-        </activity>
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

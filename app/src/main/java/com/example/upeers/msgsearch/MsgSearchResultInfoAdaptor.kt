@@ -57,6 +57,4 @@ class MsgSearchResultInfoAdaptor(private val myDataSet: List<MsgSearchResultInfo
     override fun getItemCount(): Int {
         return myDataSet.size
     }
-
 }
-

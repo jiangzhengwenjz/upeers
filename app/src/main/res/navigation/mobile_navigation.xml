@@ -15,7 +15,7 @@
         android:id="@+id/navigation_message"
         android:name="com.example.upeers.ui.message.MessageFragment"
         android:label="@string/title_2_message"
-        tools:layout="@layout/fragment_message" />
+        tools:layout="@layout/fragment_message(unused)" />
 
     <fragment
         android:id="@+id/navigation_account"

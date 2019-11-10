@@ -24,7 +24,7 @@ class MessageFragment : Fragment() {
 
         messageViewModel =
             ViewModelProviders.of(this).get(MessageViewModel::class.java)
-        val root = inflater.inflate(R.layout.activity_message, container, false)
+        val root = inflater.inflate(R.layout.fragment_message, container, false)
 
         viewManager = LinearLayoutManager(activity)
         viewAdapter = MessageUserInfoAdapter(messageViewModel.mydata, this.context)
@@ -37,10 +37,10 @@ class MessageFragment : Fragment() {
             adapter = viewAdapter
         }
 
-//        val userInfoListView: RecyclerView = root.findViewById(R.id.msg_recycler_view)
-//        messageViewModel.text.observe(this, Observer {
-//            textView.text = it
-//        })
+        // val userInfoListView: RecyclerView = root.findViewById(R.id.msg_recycler_view)
+        // messageViewModel.text.observe(this, Observer {
+        //     textView.text = it
+        // })
 
         activity?.invalidateOptionsMenu()
         setHasOptionsMenu(true);
