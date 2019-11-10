@@ -4,9 +4,9 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.example.upeers.ui.login.LoginActivity
+import com.example.upeers.ui.login.RegisterActivity
 import com.example.upeers.msglist.MessageListActivity
-
-const val EXTRA_MSG = "com.example.message.Message"
 
 class MainActivity : AppCompatActivity() {
 
@@ -15,10 +15,12 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
     }
 
-    fun onClickTemporaryButton(view: View) {
-        val intent = Intent(this, MainNaviActivity::class.java).apply {
-        }
-        startActivity(intent)
+    fun onClickSignIn(view: View) {
+        startActivity(Intent(this, LoginActivity::class.java).apply {})
+    }
+
+    fun onClickSignUp(view: View) {
+        startActivity(Intent(this, RegisterActivity::class.java).apply {})
     }
 
 
