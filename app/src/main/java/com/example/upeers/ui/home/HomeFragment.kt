@@ -1,17 +1,17 @@
 package com.example.upeers.ui.home
 
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import androidx.room.Room
 import com.example.upeers.R
-import com.example.upeers.ui.message.MessageUserInfoAdapter
+import com.example.upeers.ui.home.AppDatabase
 
 class HomeFragment : Fragment() {
 
@@ -40,6 +40,16 @@ class HomeFragment : Fragment() {
 
             adapter = viewAdapter
         }
+
+
+
+
+//        Adding database here. Commented because we decide not to do it, but I will keep it incase we need it sometime.
+//        val db = Room.databaseBuilder(
+//            activity!!.applicationContext,
+//            AppDatabase::class.java, "database-name"
+//        ).build()
+
 
         return root
     }

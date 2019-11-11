@@ -1,6 +1,7 @@
 package com.example.upeers.ui.home
 
 import androidx.lifecycle.ViewModel
+import com.example.upeers.ui.home.UserDao
 
 class HomeViewModel : ViewModel() {
 
