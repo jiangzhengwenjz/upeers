@@ -18,3 +18,5 @@ captures
 .gradle/
 *.class
 .fuse_hidden*
+.idea/codeStyles/Project.xml
+.idea/navEditor.xml

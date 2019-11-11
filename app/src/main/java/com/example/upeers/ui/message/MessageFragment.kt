@@ -27,7 +27,7 @@ class MessageFragment : Fragment() {
         val root = inflater.inflate(R.layout.fragment_message, container, false)
 
         viewManager = LinearLayoutManager(activity)
-        viewAdapter = MessageUserInfoAdapter(messageViewModel.mydata)
+        viewAdapter = MessageUserInfoAdapter(messageViewModel.mydata, this.context)
 
         recyclerView = root.findViewById<RecyclerView>(R.id.msg_recycler_view).apply {
             setHasFixedSize(true)
