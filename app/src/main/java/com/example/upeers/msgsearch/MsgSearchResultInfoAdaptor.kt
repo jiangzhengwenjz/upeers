@@ -13,6 +13,7 @@ import com.example.upeers.ui.message.MessageUserInfoAdapter
 import kotlinx.android.synthetic.main.layout_message_search_result.view.*
 
 class MsgSearchResultInfoAdaptor(private val myDataSet: List<MsgSearchResultInfo>) : RecyclerView.Adapter<MsgSearchResultInfoAdaptor.MsgSearchResultInfoViewHolder>() {
+
     class MsgSearchResultInfoViewHolder(userInfoView: View) : RecyclerView.ViewHolder(userInfoView) {
         val label: TextView = userInfoView.findViewById(R.id.label)
         val username: TextView = userInfoView.findViewById(R.id.username)
@@ -57,4 +58,5 @@ class MsgSearchResultInfoAdaptor(private val myDataSet: List<MsgSearchResultInfo
     override fun getItemCount(): Int {
         return myDataSet.size
     }
+
 }
