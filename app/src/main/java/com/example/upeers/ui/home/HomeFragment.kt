@@ -45,10 +45,10 @@ class HomeFragment : Fragment() {
 
 
 //        Adding database here. Commented because we decide not to do it, but I will keep it incase we need it sometime.
-//        val db = Room.databaseBuilder(
-//            activity!!.applicationContext,
-//            AppDatabase::class.java, "database-name"
-//        ).build()
+        val db = Room.databaseBuilder(
+            activity!!.applicationContext,
+            AppDatabase::class.java, "database-name"
+        ).build()
 
 
         return root
