@@ -7,7 +7,7 @@ class Message(val message: String,
 
 }
 
-class User (val nickname: String, val porfileUrl: String)
+class User (val nickname: String, val profileAvatar: Int)
 {
 
 }

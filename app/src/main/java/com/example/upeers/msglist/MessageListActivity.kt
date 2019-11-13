@@ -15,7 +15,22 @@ class MessageListActivity : AppCompatActivity() {
         setContentView(R.layout.activity_message_list)
 
 
-        val messageList = listOf<Message>(Message("As usual", User("Tongyu", ""), System.currentTimeMillis()))
+        val messageList = listOf<Message>(
+            Message("As usual", User("Tongyu", R.drawable.alex), System.currentTimeMillis()),
+            Message("Not that much", User("Alex", R.drawable.alex), System.currentTimeMillis()),
+            Message("As usual", User("Tongyu", R.drawable.alex), System.currentTimeMillis()),
+            Message("Not that much", User("Alex", R.drawable.alex), System.currentTimeMillis()),
+            Message("As usual", User("Tongyu", R.drawable.alex), System.currentTimeMillis()),
+            Message("Not that much", User("Alex", R.drawable.alex), System.currentTimeMillis()),
+            Message("As usual", User("Tongyu", R.drawable.alex), System.currentTimeMillis()),
+            Message("Not that much", User("Alex", R.drawable.alex), System.currentTimeMillis()),
+            Message("As usual", User("Tongyu", R.drawable.alex), System.currentTimeMillis()),
+            Message("As usual", User("Tongyu", R.drawable.alex), System.currentTimeMillis()),
+            Message("As usual", User("Tongyu", R.drawable.alex), System.currentTimeMillis()),
+            Message("As usual", User("Tongyu", R.drawable.alex), System.currentTimeMillis()),
+            Message("Not that much", User("Alex", R.drawable.alex), System.currentTimeMillis()),
+            Message("Not that much", User("Alex", R.drawable.alex), System.currentTimeMillis())
+        )
 
         mMessageRecycler = findViewById<RecyclerView>(R.id.recyclerview_msg_list)
         mMessageRecycler.setHasFixedSize(true);

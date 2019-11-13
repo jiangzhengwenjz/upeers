@@ -27,7 +27,7 @@ class MessageListAdapter(private val mContext:Context,
             messageText.text = message.message
 
             // Format the stored timestamp into a readable String using method.
-            timeText.text = message.createdAt.toString()
+            timeText.text = Utils.formatTime(message.createdAt)
         }
     }
 
@@ -41,7 +41,7 @@ class MessageListAdapter(private val mContext:Context,
 
             // Insert the profile image from the URL into the ImageView.
 //            Utils.displayRoundImageFromUrl(mContext, message.sender.porfileUrl, profileImage);
-            profileImage.setImageResource(R.drawable.alex)
+            profileImage.setImageResource(message.sender.profileAvatar)
         }
     }
 
