@@ -60,6 +60,10 @@
             android:label="@string/title_activity_register"
             android:parentActivityName=".MainActivity">
         </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
