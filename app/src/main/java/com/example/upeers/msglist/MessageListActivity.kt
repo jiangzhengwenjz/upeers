@@ -117,8 +117,6 @@ class MessageListActivity : AppCompatActivity() {
             val picturePath = cursor.getString(columnIndex)
             cursor.close()
 
-//            val imageView = findViewById(R.id.imgView) as ImageView
-//            imageView.setImageBitmap(BitmapFactory.decodeFile(picturePath))
             messageList.add(Message(picturePath, userMe, System.currentTimeMillis(), true, selectedImage))
             mMessageListAdapter.notifyDataSetChanged()
         }

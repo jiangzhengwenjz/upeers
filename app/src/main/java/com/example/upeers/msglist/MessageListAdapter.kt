@@ -10,13 +10,6 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.upeers.R
 import com.sendbird.androidchattutorial.Utils
-import kotlinx.android.synthetic.main.item_message_img_sent.view.*
-import java.time.format.DateTimeFormatter
-import java.util.*
-import java.io.File
-import android.graphics.BitmapFactory
-import android.graphics.Bitmap
-import com.squareup.picasso.Picasso
 
 
 class MessageListAdapter(private val mContext:Context,
@@ -48,11 +41,7 @@ class MessageListAdapter(private val mContext:Context,
         val messageImg: ImageView = itemView.findViewById(R.id.text_messageimg_body)
 
         override fun bind(message: Message) {
-//            Picasso.get().load(message.message).into(messageImg)
             messageImg.setImageURI(message.uri)
-//            if (imgFile.exists()) {
-//                val myBitmap = BitmapFactory.decodeFile(imgFile.absolutePath)
-//            }
         }
     }
 
@@ -65,7 +54,6 @@ class MessageListAdapter(private val mContext:Context,
             nameText.text = message.sender.nickname
 
             // Insert the profile image from the URL into the ImageView.
-//            Utils.displayRoundImageFromUrl(mContext, message.sender.porfileUrl, profileImage);
             profileImage.setImageResource(message.sender.profileAvatar)
         }
     }

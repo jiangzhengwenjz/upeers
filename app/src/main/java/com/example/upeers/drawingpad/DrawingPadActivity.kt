@@ -19,12 +19,7 @@ import java.io.IOException
 @Suppress("DEPRECATION")
 class DrawingPadActivity : AppCompatActivity() {
 
-//    override fun onCreate(savedInstanceState: Bundle?) {
-//        super.onCreate(savedInstanceState)
-//        setContentView(R.layout.activity_drawing_pad)
-//    }
     private var drawingPad: Drawing? = null
-//    private var backPressed  = 0L
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -61,15 +56,6 @@ class DrawingPadActivity : AppCompatActivity() {
         drawingPad!!.setBrushSize(selectedSize)
     }
 
-//    fun changeSizeDialog(view: View) {
-//        val sizeFragment = SizeFragment()
-//        sizeFragment.show(supportFragmentManager, sizeFragment.tag)
-//    }
-//
-//    fun changeColorDialog(view: View) {
-//        val colorFragment = ColorFragment()
-//        colorFragment.show(supportFragmentManager, colorFragment.tag)
-//    }
 
     @Throws(IOException::class)
     fun saveCanvas(view: View) {
@@ -116,14 +102,4 @@ class DrawingPadActivity : AppCompatActivity() {
         drawingPad!!.destroyDrawingCache()
     }
 
-//    override fun onBackPressed() {
-//        val timeUnit = 2000
-//        if (timeUnit + backPressed > System.currentTimeMillis()) {
-//            finishAffinity()
-//            System.exit(0)
-//        } else {
-//            Toast.makeText(this, "Press again to exit", Toast.LENGTH_SHORT).show()
-//        }
-//        backPressed = System.currentTimeMillis()
-//    }
 }
