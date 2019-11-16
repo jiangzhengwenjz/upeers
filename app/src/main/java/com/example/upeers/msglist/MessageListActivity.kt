@@ -78,7 +78,10 @@ class MessageListActivity : AppCompatActivity() {
         mMessageRecycler.setHasFixedSize(true);
 
         mMessageListAdapter = MessageListAdapter(this, messageList)
-        mMessageRecycler.layoutManager = LinearLayoutManager(this)
+        // set sth for layout manager
+        val llm = LinearLayoutManager(this)
+        llm.stackFromEnd = true
+        mMessageRecycler.layoutManager = llm
         mMessageRecycler.adapter = mMessageListAdapter
     }
 
@@ -132,7 +135,9 @@ class MessageListActivity : AppCompatActivity() {
             cursor.close()
 
             messageList.add(Message(picturePath, userMe, System.currentTimeMillis(), true, selectedImage))
-            mMessageListAdapter.notifyDataSetChanged()
+            // mMessageListAdapter.notifyDataSetChanged()
+            mMessageListAdapter.notifyItemInserted(mMessageListAdapter.getItemCount()-1);
+            mMessageRecycler.scrollToPosition(mMessageListAdapter.getItemCount()-1);
         }
     }
 
