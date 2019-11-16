@@ -23,8 +23,6 @@
         <activity
             android:name=".msglist.MessageListActivity"
             android:theme="@style/AppTheme_NoActionBar" />
-        <activity
-            android:name=".msgsearch.MsgSearchActivity"
         <activity android:name=".ui.cs5115SellTextbookConfirm"></activity>
         <activity
             android:name=".msgsearch.MsgSearchActivity"
@@ -50,7 +48,6 @@
         <activity android:name=".csci5115Textbook1Buy" />
         <activity android:name=".csci5115BuyTextbook" />
         <activity android:name=".TextbookMainActivity" />
-        <activity android:name=".MainActivity">
         <activity
             android:name=".MainActivity"
             android:theme="@style/AppTheme_NoActionBar">
@@ -74,10 +71,6 @@
             >
 
         </activity>
-        <activity
-            android:name=".ui.login.RegisterActivity"
-            android:label="@string/title_activity_register"
-            android:parentActivityName=".MainActivity" />
         <activity android:name=".ui.home.AddCourseActivity" />
     </application>
 
