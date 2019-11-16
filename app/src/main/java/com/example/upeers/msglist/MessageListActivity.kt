@@ -16,10 +16,15 @@ import android.graphics.BitmapFactory
 import android.net.Uri
 import android.os.Build
 import android.provider.MediaStore
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.ImageView
 import android.widget.Toast
+import androidx.appcompat.widget.Toolbar
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import androidx.fragment.app.FragmentManager
+import com.example.upeers.ui.message.MessageFragment
 import java.io.File
 import java.util.jar.Manifest
 
@@ -41,6 +46,10 @@ class MessageListActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_message_list)
+
+        val toolbar:Toolbar = findViewById<Toolbar>(R.id.msg_list_toolbar)
+        setSupportActionBar(toolbar)
+
         // hide chat tool
         chatbox = findViewById<LinearLayout>(R.id.layout_chatbox)
         chattools = findViewById<LinearLayout>(R.id.layout_chattools)
@@ -69,8 +78,16 @@ class MessageListActivity : AppCompatActivity() {
         mMessageRecycler.setHasFixedSize(true);
 
         mMessageListAdapter = MessageListAdapter(this, messageList)
-        mMessageRecycler.layoutManager = LinearLayoutManager(this)
+        // set sth for layout manager
+        val llm = LinearLayoutManager(this)
+        llm.stackFromEnd = true
+        mMessageRecycler.layoutManager = llm
         mMessageRecycler.adapter = mMessageListAdapter
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.mgs_list_toolbar, menu);
+        return true;
     }
 
     // user clicked + button
@@ -118,7 +135,9 @@ class MessageListActivity : AppCompatActivity() {
             cursor.close()
 
             messageList.add(Message(picturePath, userMe, System.currentTimeMillis(), true, selectedImage))
-            mMessageListAdapter.notifyDataSetChanged()
+            // mMessageListAdapter.notifyDataSetChanged()
+            mMessageListAdapter.notifyItemInserted(mMessageListAdapter.getItemCount()-1);
+            mMessageRecycler.scrollToPosition(mMessageListAdapter.getItemCount()-1);
         }
     }
 
@@ -160,4 +179,10 @@ class MessageListActivity : AppCompatActivity() {
         }
     }
 
+    fun onGiveKudosClicked(menuItem: MenuItem) {
+        // give a form when user clicked give kudos
+        val fm : FragmentManager = supportFragmentManager
+        val giveKudos : RatingBarDialog = RatingBarDialog()
+        giveKudos.show(fm, "nty")
+    }
 }
