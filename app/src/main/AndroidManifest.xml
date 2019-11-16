@@ -3,6 +3,12 @@
     package="com.example.upeers">
     <!-- To access Google+ APIs: -->
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
 
     <application
         android:allowBackup="true"
@@ -15,6 +21,8 @@
         <activity android:name=".coursepage.CoursePageActivity"></activity>
 
         <activity android:name=".msglist.MessageListActivity"></activity>
+
+        <activity android:name=".drawingpad.DrawingPadActivity"></activity>
 
         <activity
             android:name=".msgsearch.MsgSearchActivity"
@@ -57,6 +65,7 @@
             android:label="@string/title_activity_register"
             android:parentActivityName=".MainActivity">
         </activity>
+
     </application>
 
 </manifest>
