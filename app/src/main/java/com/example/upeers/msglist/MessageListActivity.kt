@@ -18,6 +18,7 @@ import android.os.Build
 import android.provider.MediaStore
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.EditText
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
@@ -200,5 +201,16 @@ class MessageListActivity : AppCompatActivity() {
         val intent = Intent(this, FakeDrawingPadActivity::class.java).apply {
         }
         startActivity(intent)
+    }
+
+    fun onClickSend(view: View) {
+        val editText: EditText = findViewById(R.id.edittext_chatbox)
+        val text = editText.text.toString()
+        editText.text.clear()
+        editText.clearFocus()
+        messageList.add(Message(text, userMe, System.currentTimeMillis()))
+        // mMessageListAdapter.notifyDataSetChanged()
+        mMessageListAdapter.notifyItemInserted(mMessageListAdapter.getItemCount()-1);
+        mMessageRecycler.scrollToPosition(mMessageListAdapter.getItemCount()-1);
     }
 }
