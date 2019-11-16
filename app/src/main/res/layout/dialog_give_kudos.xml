@@ -4,12 +4,13 @@
     android:layout_height="match_parent">
 
     <RatingBar
-        style="?android:attr/ratingBarStyleIndicator"
+        style="@style/clapRatingBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:isIndicator="false"
-        android:stepSize="0.5"
-        android:rating="3" />
+        android:stepSize="1.0"
+        android:rating="0"
+        />
 
 </LinearLayout>

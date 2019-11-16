@@ -15,4 +15,7 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="clapRatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/kudos</item>
+    </style>
 </resources>
