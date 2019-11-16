@@ -15,6 +15,8 @@ import android.view.animation.BounceInterpolator
 import android.animation.Animator
 import android.animation.AnimatorListenerAdapter
 import android.util.DisplayMetrics
+import android.os.Build
+import android.app.ActivityOptions
 
 class MainActivity : AppCompatActivity() {
 
@@ -124,10 +126,16 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun onClickSignIn(view: View) {
-        startActivity(Intent(this, LoginActivity::class.java).apply {})
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP)
+            startActivity(Intent(this, LoginActivity::class.java).apply {})
+        else
+            startActivity(Intent(this, LoginActivity::class.java).apply {}, ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
     }
 
     fun onClickSignUp(view: View) {
-        startActivity(Intent(this, RegisterActivity::class.java).apply {})
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP)
+            startActivity(Intent(this, RegisterActivity::class.java).apply {})
+        else
+            startActivity(Intent(this, RegisterActivity::class.java).apply {}, ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
     }
 }
