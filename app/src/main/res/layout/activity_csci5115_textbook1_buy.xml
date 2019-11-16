@@ -12,13 +12,13 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:textStyle="bold"
-            android:text="Seller: Alex P"
+            android:text="Seller: Alex Bradley"
             android:textSize="40dp" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:textStyle="bold"
-            android:text="Price: $20"
+            android:text="Price: $10"
             android:layout_marginTop="50sp"
             android:textSize="40dp" />
         <TextView
@@ -55,7 +55,7 @@
             android:layout_width="match_parent"
             android:textStyle="bold"
             android:layout_height="50dp"
-            android:text="Seller: John D"
+            android:text="Seller: John Doe"
             android:textSize="40dp" />
         <TextView
             android:layout_width="match_parent"
@@ -100,12 +100,12 @@
             android:layout_width="match_parent"
             android:textStyle="bold"
             android:layout_height="50dp"
-            android:text="Seller: Jane L"
+            android:text="Seller: Jane Doe"
             android:textSize="40dp" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:text="Price: $10"
+            android:text="Price: $20"
             android:textStyle="bold"
             android:layout_marginTop="450sp"
             android:textSize="40dp" />

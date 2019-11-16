@@ -36,7 +36,7 @@
             android:layout_marginTop="150dp"
             android:inputType="textPersonName"
             android:layout_centerHorizontal="true"
-            android:text="Title" />
+            android:text="ISBN" />
         <EditText
             android:id="@+id/editText2"
             android:layout_width="wrap_content"
@@ -45,7 +45,7 @@
             android:layout_marginTop="200dp"
             android:inputType="textPersonName"
             android:layout_centerHorizontal="true"
-            android:text="Author(s)" />
+            android:text="Condition" />
         <EditText
             android:id="@+id/editText3"
             android:layout_width="wrap_content"
@@ -54,16 +54,8 @@
             android:layout_marginTop="250dp"
             android:inputType="textPersonName"
             android:layout_centerHorizontal="true"
-            android:text="Edition" />
-        <EditText
-            android:id="@+id/editText4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:layout_marginTop="300dp"
-            android:inputType="textPersonName"
-            android:layout_centerHorizontal="true"
-            android:text="Condition" />
+            android:text="Price" />
+
         <TextView
             android:id="@+id/textView9"
             android:layout_width="wrap_content"
@@ -96,32 +88,25 @@
             android:layout_marginLeft="250dp"
             app:srcCompat="@android:drawable/ic_input_add" />
 
+
+
+
         <Button
-            android:id="@+id/upload"
+            android:id="@+id/Go"
             android:layout_width="150dp"
             android:layout_height="75dp"
-            android:text="Upload"
+            android:text="Go"
             android:layout_marginTop="550dp"
-            android:layout_marginLeft="50dp"
+            android:layout_centerHorizontal="true"
             android:textSize="20dp" />
-
-        <Button
-            android:id="@+id/addAnother"
-            android:layout_width="150dp"
-            android:layout_height="75dp"
-            android:text="Upload and Add Another"
-            android:layout_marginTop="550dp"
-            android:layout_marginLeft="200dp" />
-
         <Button
             android:id="@+id/Cancel"
-            android:layout_width="match_parent"
+            android:layout_width="150dp"
             android:layout_height="75dp"
             android:text="Cancel"
-            android:layout_marginTop="630dp"
-            android:layout_marginLeft="250dp"
-            android:textSize="20dp"
-            android:layout_centerHorizontal="true" />
+            android:layout_marginTop="650dp"
+            android:layout_centerHorizontal="true"
+            android:textSize="20dp" />
 
     </RelativeLayout>
 

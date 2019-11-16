@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.upeers">
+    <!-- To access Google+ APIs: -->
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -9,23 +11,31 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".ui.cs5115SellTextbookConfirm"></activity>
         <activity
-            android:name=".cs5115SellTextbook"
-            android:label="@string/title_activity_cs5115_sell_textbook"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:name=".msgsearch.MsgSearchActivity"
+            android:theme="@style/AppTheme_NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
         <activity
-            android:name=".cs5115Textbook1Details"
-            android:label="@string/title_activity_cs5115_textbook1_details"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".cs5115TextbookWishlist"
-            android:label="@string/title_activity_cs5115_textbook_wishlist"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:name=".MainNaviActivity"
+            android:label="@string/title_activity_main_navi"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme_NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.upeers.MainActivity" />
+        </activity>
+        <activity android:name=".cs5115SellTextbook" />
+        <activity android:name=".cs5115Textbook1Details" />
+        <activity android:name=".cs5115TextbookWishlist" />
         <activity android:name=".csci5115Textbook1Buy" />
-        <activity
-            android:name=".cs5115Textbook1Buy"
-            android:label="@string/title_activity_cs5115_textbook1_buy"
-            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".csci5115BuyTextbook" />
         <activity android:name=".TextbookMainActivity" />
         <activity android:name=".MainActivity">
