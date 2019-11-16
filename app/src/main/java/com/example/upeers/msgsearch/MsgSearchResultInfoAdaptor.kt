@@ -8,9 +8,6 @@ import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.upeers.R
-import com.example.upeers.ui.message.MessageUserInfo
-import com.example.upeers.ui.message.MessageUserInfoAdapter
-import kotlinx.android.synthetic.main.layout_message_search_result.view.*
 
 class MsgSearchResultInfoAdaptor(private val myDataSet: List<MsgSearchResultInfo>) : RecyclerView.Adapter<MsgSearchResultInfoAdaptor.MsgSearchResultInfoViewHolder>() {
 
@@ -19,7 +16,7 @@ class MsgSearchResultInfoAdaptor(private val myDataSet: List<MsgSearchResultInfo
         val username: TextView = userInfoView.findViewById(R.id.username)
         val active: TextView = userInfoView.findViewById(R.id.active)
         val lastMessage: TextView = userInfoView.findViewById(R.id.lastMessage)
-        val avatar: ImageView = userInfoView.findViewById(R.id.avatar)
+        val avatar: ImageView = userInfoView.findViewById(R.id.tutor_avatar)
         // to display the search result of the messages under one users
         val msgSearchContent : RecyclerView = userInfoView.findViewById(R.id.msg_search_content)
     }

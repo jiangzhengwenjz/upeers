@@ -24,6 +24,7 @@ import androidx.appcompat.widget.Toolbar
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.FragmentManager
+import com.example.upeers.tutordetail.TutorDetailActivity
 import com.example.upeers.ui.message.MessageFragment
 import java.io.File
 import java.util.jar.Manifest
@@ -184,5 +185,12 @@ class MessageListActivity : AppCompatActivity() {
         val fm : FragmentManager = supportFragmentManager
         val giveKudos : RatingBarDialog = RatingBarDialog()
         giveKudos.show(fm, "nty")
+    }
+
+    fun onAvatarClicked(view: View) {
+        val intent = Intent(this, TutorDetailActivity::class.java).apply {
+            // should use putExtra here I guess
+        }
+        startActivity(intent)
     }
 }

@@ -63,6 +63,12 @@
             android:name=".ui.login.RegisterActivity"
             android:label="@string/title_activity_register"
             android:parentActivityName=".MainActivity"></activity>
+        <activity
+            android:name=".tutordetail.TutorDetailActivity"
+            android:label="CSCI 5115"
+            >
+
+        </activity>
     </application>
 
 </manifest>
