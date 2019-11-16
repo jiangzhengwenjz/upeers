@@ -3,12 +3,12 @@
     package="com.example.upeers">
     <!-- To access Google+ APIs: -->
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CAMERA" />
+
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
-
 
     <application
         android:allowBackup="true"
@@ -17,18 +17,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-        <activity android:name=".coursepage.CoursePageActivity"></activity>
-
-        <activity
-            android:name=".drawingpad.DrawingPadActivity">
-        </activity>
-
+        <activity android:name=".ui.home.AddCourseActivity"></activity>
+        <activity android:name=".coursepage.CoursePageActivity" />
+        <activity android:name=".drawingpad.DrawingPadActivity"></activity>
         <activity
             android:name=".msglist.MessageListActivity"
-            android:theme="@style/AppTheme_NoActionBar">
-        </activity>
-
+            android:theme="@style/AppTheme_NoActionBar"></activity>
         <activity
             android:name=".msgsearch.MsgSearchActivity"
             android:theme="@style/AppTheme_NoActionBar">
@@ -40,7 +34,6 @@
                 android:name="android.app.searchable"
                 android:resource="@xml/searchable" />
         </activity>
-
         <activity
             android:name=".MainNaviActivity"
             android:label="@string/title_activity_main_navi"
@@ -50,27 +43,23 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.upeers.MainActivity" />
         </activity>
-
-        <activity android:name=".MainActivity"
+        <activity
+            android:name=".MainActivity"
             android:theme="@style/AppTheme_NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".ui.login.LoginActivity"
             android:label="@string/title_activity_login"
-            android:parentActivityName=".MainActivity">
-        </activity>
-
+            android:parentActivityName=".MainActivity"></activity>
         <activity
             android:name=".ui.login.RegisterActivity"
             android:label="@string/title_activity_register"
-            android:parentActivityName=".MainActivity">
-        </activity>
-
+            android:parentActivityName=".MainActivity"></activity>
     </application>
 
 </manifest>

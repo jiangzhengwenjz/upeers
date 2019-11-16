@@ -15,6 +15,7 @@ import androidx.navigation.ui.setupWithNavController
 import com.example.upeers.coursepage.CoursePageActivity
 import com.example.upeers.msglist.MessageListActivity
 import com.example.upeers.msgsearch.MsgSearchActivity
+import com.example.upeers.ui.home.AddCourseActivity
 import com.example.upeers.ui.home.CourseInfoAdapter
 import com.example.upeers.ui.home.HomeFragment
 import com.example.upeers.ui.home.HomeViewModel
@@ -79,6 +80,9 @@ class MainNaviActivity : AppCompatActivity() {
     fun onClickAddCourse(view: View) {
         val hvm = HomeViewModel()
         hvm.changeData()
+        val intent = Intent (this, AddCourseActivity::class.java).apply {}
+        startActivity(intent)
+
 //        TODO: should auto-refresh the recycler view here.
 //        Something like navHostFragment.getChildFragmentManager().getFragments().get(0);
     }
