@@ -62,6 +62,7 @@
             android:label="@string/title_activity_register"
             android:parentActivityName=".MainActivity">
         </activity>
+
     </application>
 
 </manifest>
