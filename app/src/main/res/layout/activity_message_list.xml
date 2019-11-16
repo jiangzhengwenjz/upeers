@@ -5,6 +5,16 @@
     android:id="@+id/msg_list_constraint_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/msg_list_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_toolbar"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        app:title="Alex"
+        >
+
+    </androidx.appcompat.widget.Toolbar>
 
     <LinearLayout
         android:id="@+id/msg_list_linear_layout"

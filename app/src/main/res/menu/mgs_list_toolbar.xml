@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/msg_list_kudos"
+        android:icon="@drawable/thumbup"
+        android:onClick="onGiveKudosClicked"
+        android:title="Give Kudos"
+        app:showAsAction="ifRoom" />
+</menu>

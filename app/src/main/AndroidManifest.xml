@@ -18,7 +18,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".drawingpad.DrawingPadActivity"></activity>
-        <activity android:name=".msglist.MessageListActivity" ></activity>
+        <activity
+            android:name=".msglist.MessageListActivity"
+            android:theme="@style/AppTheme_NoActionBar"></activity>
         <activity
             android:name=".msgsearch.MsgSearchActivity"
             android:theme="@style/AppTheme_NoActionBar">
