@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="24dp"
+    android:theme="@style/AppTheme_betterCourseSelectionPage"
     tools:context=".ui.home.AddCourseActivity">
 
     <TextView
@@ -21,9 +22,9 @@
         android:textSize="16sp"
         android:layout_width="204dp"
         android:layout_height="wrap_content"
-        android:text="Course Number"
-        app:layout_constraintBottom_toBottomOf="@+id/spinner_number"
-        app:layout_constraintTop_toTopOf="@+id/spinner_number"
+        android:text="Course Subject"
+        app:layout_constraintBottom_toBottomOf="@+id/spinner_subject"
+        app:layout_constraintTop_toTopOf="@+id/spinner_subject"
         app:layout_constraintVertical_bias="0.482"
         tools:layout_editor_absoluteX="1dp" />
 
@@ -32,10 +33,10 @@
         android:textSize="16sp"
         android:layout_width="204dp"
         android:layout_height="wrap_content"
-        android:text="Course Subject"
-        app:layout_constraintBottom_toBottomOf="@+id/spinner_subject"
+        android:text="Course Number"
+        app:layout_constraintBottom_toBottomOf="@+id/spinner_number"
         app:layout_constraintEnd_toEndOf="@+id/textView4"
-        app:layout_constraintTop_toTopOf="@+id/spinner_subject" />
+        app:layout_constraintTop_toTopOf="@+id/spinner_number" />
 
     <TextView
         android:id="@+id/textView6"
@@ -66,22 +67,24 @@
         android:background="@android:drawable/btn_dropdown"
         android:spinnerMode="dropdown"
         app:layout_constraintBottom_toTopOf="@+id/spinner_term"
-        app:layout_constraintStart_toStartOf="@+id/spinner_subject"
-        app:layout_constraintTop_toBottomOf="@+id/spinner_subject" />
+        app:layout_constraintStart_toStartOf="@+id/spinner_number"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_number"
+        android:entries="@array/years"/>
 
     <Spinner
-        android:id="@+id/spinner_number"
+        android:id="@+id/spinner_subject"
         android:layout_width="204dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
         android:background="@android:drawable/btn_dropdown"
         android:spinnerMode="dropdown"
-        app:layout_constraintBottom_toTopOf="@+id/spinner_subject"
+        app:layout_constraintBottom_toTopOf="@+id/spinner_number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.556"
         app:layout_constraintStart_toEndOf="@+id/textView4"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        android:entries="@array/subjects"/>
 
     <Spinner
         android:id="@+id/spinner_term"
@@ -91,17 +94,19 @@
         android:spinnerMode="dropdown"
         app:layout_constraintBottom_toTopOf="@+id/button2"
         app:layout_constraintStart_toStartOf="@+id/spinner_year"
-        app:layout_constraintTop_toBottomOf="@+id/spinner_year" />
+        app:layout_constraintTop_toBottomOf="@+id/spinner_year"
+        android:entries="@array/terms"/>
 
     <Spinner
-        android:id="@+id/spinner_subject"
+        android:id="@+id/spinner_number"
         android:layout_width="204dp"
         android:layout_height="wrap_content"
         android:background="@android:drawable/btn_dropdown"
         android:spinnerMode="dropdown"
         app:layout_constraintBottom_toTopOf="@+id/spinner_year"
-        app:layout_constraintStart_toStartOf="@+id/spinner_number"
-        app:layout_constraintTop_toBottomOf="@+id/spinner_number" />
+        app:layout_constraintStart_toStartOf="@+id/spinner_subject"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_subject"
+        android:entries="@array/numbers"/>
 
     <Button
         android:id="@+id/button2"

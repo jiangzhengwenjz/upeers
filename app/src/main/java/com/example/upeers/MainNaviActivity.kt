@@ -82,6 +82,7 @@ class MainNaviActivity : AppCompatActivity() {
         hvm.changeData()
         val intent = Intent (this, AddCourseActivity::class.java).apply {}
         startActivity(intent)
+        finish()
 
 //        TODO: should auto-refresh the recycler view here.
 //        Something like navHostFragment.getChildFragmentManager().getFragments().get(0);

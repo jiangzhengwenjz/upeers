@@ -17,7 +17,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.home.AddCourseActivity"></activity>
         <activity android:name=".coursepage.CoursePageActivity" />
         <activity android:name=".drawingpad.DrawingPadActivity"></activity>
         <activity
@@ -60,6 +59,8 @@
             android:name=".ui.login.RegisterActivity"
             android:label="@string/title_activity_register"
             android:parentActivityName=".MainActivity"></activity>
+        <activity
+            android:name=".ui.home.AddCourseActivity"></activity>
     </application>
 
 </manifest>
