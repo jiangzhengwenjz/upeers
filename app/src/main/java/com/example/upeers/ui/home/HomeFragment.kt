@@ -11,7 +11,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.room.Room
 import com.example.upeers.R
-import com.example.upeers.ui.home.AppDatabase
 
 class HomeFragment : Fragment() {
 
@@ -40,16 +39,6 @@ class HomeFragment : Fragment() {
 
             adapter = viewAdapter
         }
-
-
-
-
-//        Adding database here. Commented because we decide not to do it, but I will keep it incase we need it sometime.
-        val db = Room.databaseBuilder(
-            activity!!.applicationContext,
-            AppDatabase::class.java, "database-name"
-        ).build()
-
 
         return root
     }
