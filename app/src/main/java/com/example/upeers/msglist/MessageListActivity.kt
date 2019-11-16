@@ -24,6 +24,8 @@ import androidx.appcompat.widget.Toolbar
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.FragmentManager
+import com.example.upeers.drawingpad.FakeDrawingPadActivity
+import com.example.upeers.msgsearch.MsgSearchActivity
 import com.example.upeers.ui.message.MessageFragment
 import java.io.File
 import java.util.jar.Manifest
@@ -184,5 +186,11 @@ class MessageListActivity : AppCompatActivity() {
         val fm : FragmentManager = supportFragmentManager
         val giveKudos : RatingBarDialog = RatingBarDialog()
         giveKudos.show(fm, "nty")
+    }
+
+    fun onClickDrawingPad(view: View) {
+        val intent = Intent(this, FakeDrawingPadActivity::class.java).apply {
+        }
+        startActivity(intent)
     }
 }

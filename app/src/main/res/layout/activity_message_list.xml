@@ -167,7 +167,8 @@
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:background="@drawable/create"
-                android:clickable="true" />
+                android:clickable="true"
+                android:onClick="onClickDrawingPad"/>
 
         </LinearLayout>
 
