@@ -32,13 +32,8 @@ class MainActivity : AppCompatActivity() {
         height = outMetrics.heightPixels.toFloat()
 
         val bootPic : ImageView = findViewById<ImageView>(R.id.start_img)
-        val introText : TextView = findViewById<TextView>(R.id.text_get_started)
-        val signInBtn : Button = findViewById<Button>(R.id.btn_login)
-        val signUpBtn : Button = findViewById<Button>(R.id.btn_register)
 
-        startWidgetFadeAnim(introText)
-        startWidgetFadeAnim(signInBtn)
-        startWidgetFadeAnim(signUpBtn)
+        startWidgetFadeAnim()
         startImgBounceAnim(bootPic)
     }
 
@@ -96,13 +91,36 @@ class MainActivity : AppCompatActivity() {
         anim1.start()
     }
 
-    private fun startWidgetFadeAnim(widget: View) {
+    private fun startWidgetFadeAnim() {
 
-        // basic alpha blending anim for widgets on starting page
-        val anim = ObjectAnimator.ofFloat(widget, "alpha", 0F, 1F)
-        anim.duration = 3000
-        anim.repeatCount = 0
-        anim.start()
+        val introText : TextView = findViewById<TextView>(R.id.text_get_started)
+        val signInBtn : Button = findViewById<Button>(R.id.btn_login)
+        val signUpBtn : Button = findViewById<Button>(R.id.btn_register)
+
+        // the buttons will fade in after the text
+        val anim1 = ObjectAnimator.ofFloat(introText, "alpha", 0F, 1F)
+        val anim2 = ObjectAnimator.ofFloat(signInBtn, "alpha", 0F, 1F)
+        val anim3 = ObjectAnimator.ofFloat(signUpBtn, "alpha", 0F, 1F)
+
+        anim1.duration = 1000
+        anim1.addListener(object : Animator.AnimatorListener {
+                override fun onAnimationStart(animation: Animator) {}
+
+                override fun onAnimationEnd(animation: Animator) {
+                    signInBtn.visibility = View.VISIBLE
+                    signUpBtn.visibility = View.VISIBLE
+
+                    val anim = AnimatorSet()
+                    anim.duration = 2000
+                    anim.play(anim2).with(anim3)
+                    anim.start()
+                }
+
+                override fun onAnimationCancel(animation: Animator) {}
+
+                override fun onAnimationRepeat(animation: Animator) {}
+            })
+        anim1.start()
     }
 
     fun onClickSignIn(view: View) {
