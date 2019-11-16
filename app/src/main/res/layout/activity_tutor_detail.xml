@@ -37,7 +37,7 @@
         android:layout_marginLeft="16dp"
         android:text="Tutored: 9 times"
         app:layout_constraintStart_toEndOf="@+id/rate"
-        tools:layout_editor_absoluteY="69dp" />
+        app:layout_constraintTop_toTopOf="@+id/rate" />
 
     <TextView
         android:id="@+id/comments"
@@ -134,12 +134,9 @@
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
         android:isIndicator="true"
         android:rating="5.0"
         android:stepSize="1.0"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/tutor_avatar"
         app:layout_constraintTop_toBottomOf="@+id/rate" />
 
