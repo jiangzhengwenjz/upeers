@@ -3,6 +3,7 @@
     <dimen name="margin_top">4dp</dimen>
     <dimen name="margin_left">8dp</dimen>
     <dimen name="avatar_dimen">100dp</dimen>
+    <dimen name="avatar_dimen_2">120dp</dimen>
     <dimen name="margin_toolbar">56dp</dimen>
     <dimen name="max_msg_width">1000dp</dimen>
   <!-- Default screen margins, per the Android Design guidelines. -->
