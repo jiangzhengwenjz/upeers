@@ -94,16 +94,6 @@ class MainActivity : AppCompatActivity() {
         anim1.start()
     }
 
-    fun onClickTemporaryButton2(view: View) {
-        val intent = Intent(this, CoursePageActivity::class.java).apply {
-        }
-        startActivity(intent)
-    }
-
-    fun onClickSignUp(view: View) {
-        startActivity(Intent(this, RegisterActivity::class.java).apply {})
-    }
-
     private fun startWidgetFadeAnim() {
 
         val introText : TextView = findViewById<TextView>(R.id.text_get_started)
