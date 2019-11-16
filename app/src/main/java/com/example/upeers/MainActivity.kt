@@ -4,15 +4,105 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.ImageView
+import android.widget.TextView
+import android.widget.Button
 import com.example.upeers.ui.login.LoginActivity
 import com.example.upeers.ui.login.RegisterActivity
-import com.example.upeers.msglist.MessageListActivity
+import android.animation.ObjectAnimator
+import android.animation.AnimatorSet
+import android.view.animation.BounceInterpolator
+import android.animation.Animator
+import android.animation.AnimatorListenerAdapter
+import android.util.DisplayMetrics
 
 class MainActivity : AppCompatActivity() {
+
+    private var width : Float = 0F
+    private var height : Float = 0F
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        val manager = this.windowManager
+        val outMetrics = DisplayMetrics()
+        manager.defaultDisplay.getMetrics(outMetrics)
+        width = outMetrics.widthPixels.toFloat()
+        height = outMetrics.heightPixels.toFloat()
+
+        val bootPic : ImageView = findViewById<ImageView>(R.id.start_img)
+        val introText : TextView = findViewById<TextView>(R.id.text_get_started)
+        val signInBtn : Button = findViewById<Button>(R.id.btn_login)
+        val signUpBtn : Button = findViewById<Button>(R.id.btn_register)
+
+        startWidgetFadeAnim(introText)
+        startWidgetFadeAnim(signInBtn)
+        startWidgetFadeAnim(signUpBtn)
+        startImgBounceAnim(bootPic)
+    }
+
+    private fun startImgBounceAnim(widget: View) {
+
+        // fml, no idea how to force move a widget in constraint layout
+        // workaround: use animation
+        // at first, move the picture to the very top
+        val originX : Float = widget.translationX;
+
+        val anim1 = ObjectAnimator.ofFloat(widget, View.TRANSLATION_Y, originX, -height / 2)
+        anim1.duration = 10
+        anim1.addListener(object : Animator.AnimatorListener {
+
+            // non-abstract -> have to give implementation for these functions
+            override fun onAnimationStart(animation: Animator) {}
+
+            override fun onAnimationEnd(animation: Animator) {
+                widget.visibility = View.VISIBLE // picture is visible
+
+                // init, shrink the size
+                val anim2 = ObjectAnimator.ofFloat(widget, View.SCALE_X, 1F, 0.5F)
+                val anim3 = ObjectAnimator.ofFloat(widget, View.SCALE_Y, 1F, 0.5F)
+
+                val anim = AnimatorSet()
+                anim.play(anim2).with(anim3)
+                anim.duration = 10
+                anim.addListener(object : AnimatorListenerAdapter() {
+
+                    // override again as callback, inject main animation step
+                    override fun onAnimationEnd(animation: Animator?) {
+                        super.onAnimationEnd(animation)
+
+                        // main animation
+                        // note: only anim4 should be affected by the interpolator
+                        val anim4 = ObjectAnimator.ofFloat(widget, View.TRANSLATION_Y, -height / 2, originX)
+                        anim4.interpolator = BounceInterpolator()
+                        val anim5 = ObjectAnimator.ofFloat(widget, View.ROTATION, 0F, -360F)
+                        val anim6 = ObjectAnimator.ofFloat(widget, View.SCALE_X, 0.5F, 0.5F, 0.5F, 0.5F, 1F)
+                        val anim7 = ObjectAnimator.ofFloat(widget, View.SCALE_Y, 0.5F, 0.5F, 0.5F, 0.5F, 1F)
+
+                        val animMain = AnimatorSet()
+                        animMain.duration = 2000
+                        animMain.play(anim4).with(anim5).with(anim6).with(anim7)
+                        animMain.start()
+                    }
+                })
+                anim.start()
+            }
+
+            override fun onAnimationCancel(animation: Animator) {}
+
+            override fun onAnimationRepeat(animation: Animator) {}
+        })
+        anim1.start()
+    }
+
+    private fun startWidgetFadeAnim(widget: View) {
+
+        // basic alpha blending anim for widgets on starting page
+        val anim = ObjectAnimator.ofFloat(widget, "alpha", 0F, 1F)
+        anim.duration = 3000
+        anim.repeatCount = 0
+        anim.start()
     }
 
     fun onClickSignIn(view: View) {
@@ -22,6 +112,4 @@ class MainActivity : AppCompatActivity() {
     fun onClickSignUp(view: View) {
         startActivity(Intent(this, RegisterActivity::class.java).apply {})
     }
-
-
 }
