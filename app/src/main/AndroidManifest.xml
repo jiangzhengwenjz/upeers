@@ -17,11 +17,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".drawingpad.FakeDrawingPadActivity"></activity>
         <activity android:name=".coursepage.CoursePageActivity" />
-        <activity android:name=".drawingpad.DrawingPadActivity"></activity>
+        <activity android:name=".drawingpad.DrawingPadActivity" />
         <activity
             android:name=".msglist.MessageListActivity"
-            android:theme="@style/AppTheme_NoActionBar"></activity>
+            android:theme="@style/AppTheme_NoActionBar" />
         <activity
             android:name=".msgsearch.MsgSearchActivity"
             android:theme="@style/AppTheme_NoActionBar">
@@ -54,13 +55,12 @@
         <activity
             android:name=".ui.login.LoginActivity"
             android:label="@string/title_activity_login"
-            android:parentActivityName=".MainActivity"></activity>
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".ui.login.RegisterActivity"
             android:label="@string/title_activity_register"
-            android:parentActivityName=".MainActivity"></activity>
-        <activity
-            android:name=".ui.home.AddCourseActivity"></activity>
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".ui.home.AddCourseActivity" />
     </application>
 
 </manifest>
