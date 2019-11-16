@@ -179,8 +179,5 @@ class MessageListActivity : AppCompatActivity() {
         val fm : FragmentManager = supportFragmentManager
         val giveKudos : RatingBarDialog = RatingBarDialog()
         giveKudos.show(fm, "nty")
-//        FragmentManager fm = getSupportFragmentManager();
-//        EditNameDialogFragment editNameDialogFragment = EditNameDialogFragment.newInstance("Some Title");
-//        editNameDialogFragment.show(fm, "fragment_edit_name");
     }
 }
