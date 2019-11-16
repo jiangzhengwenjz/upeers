@@ -15,6 +15,9 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="clapRatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/kudos</item>
+    </style>
     <style name="AppTheme_betterCourseSelectionPage" parent="android:Theme.Holo.Light">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
@@ -22,3 +25,4 @@
     </style>
 
 </resources>
+

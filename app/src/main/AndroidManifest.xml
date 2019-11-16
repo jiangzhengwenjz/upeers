@@ -55,7 +55,17 @@
         <activity
             android:name=".ui.login.LoginActivity"
             android:label="@string/title_activity_login"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".MainActivity"></activity>
+        <activity
+            android:name=".ui.login.RegisterActivity"
+            android:label="@string/title_activity_register"
+            android:parentActivityName=".MainActivity"></activity>
+        <activity
+            android:name=".tutordetail.TutorDetailActivity"
+            android:label="CSCI 5115"
+            >
+
+        </activity>
         <activity
             android:name=".ui.login.RegisterActivity"
             android:label="@string/title_activity_register"
