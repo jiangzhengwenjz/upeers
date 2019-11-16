@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import android.widget.SearchView
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
@@ -11,7 +12,14 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.example.upeers.coursepage.CoursePageActivity
+import com.example.upeers.msglist.MessageListActivity
 import com.example.upeers.msgsearch.MsgSearchActivity
+import com.example.upeers.ui.home.AddCourseActivity
+import com.example.upeers.ui.home.CourseInfoAdapter
+import com.example.upeers.ui.home.HomeFragment
+import com.example.upeers.ui.home.HomeViewModel
+import kotlinx.android.synthetic.main.activity_main_navi.*
 
 class MainNaviActivity : AppCompatActivity() {
 
@@ -56,13 +64,27 @@ class MainNaviActivity : AppCompatActivity() {
         }
     }
 
-    // override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-    //     menuInflater.inflate(R.menu.toolbar_menu, menu)
-    //     val searchItem = menu?.findItem(R.id.action_search)
-    //     val searchView = searchItem?.actionView as SearchView
+    fun onClickMsgUserCard(view: View) {
+        val intent = Intent(this, MessageListActivity::class.java).apply {
+//            should use putExtra here I guess
+        }
+        startActivity(intent)
+    }
 
-    //     // Configure the search info and add any event listeners...
+    fun onClickCourseList(view: View) {
+        val intent = Intent (this, CoursePageActivity::class.java).apply {}
+        startActivity(intent)
+    }
 
-    //     return super.onCreateOptionsMenu(menu)
-    // }
+    //"add" button. Add a course (namely 5115).
+    fun onClickAddCourse(view: View) {
+        val hvm = HomeViewModel()
+        hvm.changeData()
+        val intent = Intent (this, AddCourseActivity::class.java).apply {}
+        startActivity(intent)
+        finish()
+
+//        TODO: should auto-refresh the recycler view here.
+//        Something like navHostFragment.getChildFragmentManager().getFragments().get(0);
+    }
 }

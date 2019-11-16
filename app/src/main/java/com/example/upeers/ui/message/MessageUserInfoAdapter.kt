@@ -1,5 +1,6 @@
 package com.example.upeers.ui.message
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,7 +9,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.upeers.R
 
-open class MessageUserInfoAdapter(private val myDataSet: List<MessageUserInfo>) :
+open class MessageUserInfoAdapter(private val myDataSet: List<MessageUserInfo>, private val context: Context?) :
     RecyclerView.Adapter<MessageUserInfoAdapter.MessageUserInfoViewHolder>(){
 
     open class MessageUserInfoViewHolder(val userInfoView: View)  : RecyclerView.ViewHolder(userInfoView) {
@@ -16,7 +17,7 @@ open class MessageUserInfoAdapter(private val myDataSet: List<MessageUserInfo>) 
         val username: TextView = userInfoView.findViewById(R.id.username)
         val active: TextView = userInfoView.findViewById(R.id.active)
         val lastMessage: TextView = userInfoView.findViewById(R.id.lastMessage)
-        val avatar: ImageView = userInfoView.findViewById(R.id.avatar)
+        val avatar: ImageView = userInfoView.findViewById(R.id.tutor_avatar)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MessageUserInfoViewHolder {
