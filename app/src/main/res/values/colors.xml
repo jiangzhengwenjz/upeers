@@ -5,7 +5,7 @@
     <color name="colorPrimaryDark">#5b0013</color>
     <color name="colorSecondary">#ffcc33</color>
     <color name="colorSecondaryLight">#ffde7a</color>
-    <color name="colorSecondaryDark">#ffb71e</color>
+    <color name="colorSecondaryDark">#FFB71E</color>
     <color name="colorPrimaryText">#ffffff</color>
     <color name="colorSecondaryText">#000000</color>
     <color name="colorAccent">#ffcc33</color> <!--this is same as colorSecondary -->

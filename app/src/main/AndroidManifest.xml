@@ -56,7 +56,6 @@
             android:theme="@style/AppTheme_NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -70,8 +69,12 @@
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".tutordetail.TutorDetailActivity"
-            android:label="CSCI 5115"></activity>
+            android:label="CSCI 5115" />
+            
         <activity android:name=".ui.home.AddCourseActivity" />
+        <activity
+            android:name=".ui.book.BookDetailActivity"
+            android:label="Book Details" />
     </application>
 
 </manifest>
