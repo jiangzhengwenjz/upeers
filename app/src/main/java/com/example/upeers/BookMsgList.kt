@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
@@ -43,6 +44,10 @@ class BookMsgList : MessageListActivity() {
         chatbox = findViewById<LinearLayout>(R.id.layout_chatbox)
         chattools = findViewById<LinearLayout>(R.id.layout_chattools)
         chattools.visibility = View.INVISIBLE
+
+        // set image for the book
+        val bookPreview : ImageView = findViewById(R.id.book_std_img)
+        bookPreview.setImageResource(R.drawable.design_norman)
 
         messageList = arrayListOf(
             Message("Hi! Your book looks very good. I would like to take it!", userMe, System.currentTimeMillis()),
