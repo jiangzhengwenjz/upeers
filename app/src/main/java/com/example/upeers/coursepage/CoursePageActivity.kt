@@ -69,6 +69,9 @@ class CoursePageActivity : AppCompatActivity() {
     fun onClickSellButton(view: View) {
         val intent = Intent(this, SellNewBookActivity::class.java).apply {}
 
+        startActivity(intent)
+    }
+
     fun onClickBook(view: View) {
         val intent = Intent(this, BookDetailActivity::class.java).apply {}
 
