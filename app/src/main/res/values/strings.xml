@@ -20,7 +20,7 @@
 
     <string-array name="book_sort_options">
         <item>Price</item>
-        <item>Date Added</item>
+        <item>Views Count</item>
         <item>Distance</item>
     </string-array>
 </resources>

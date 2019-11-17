@@ -37,7 +37,7 @@
             android:layout_width="400dp"
             android:layout_height="400dp"
             android:layout_marginTop="200dp"
-            app:srcCompat="@drawable/used_textbook" />
+            app:srcCompat="@drawable/textbook1" />
     </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
