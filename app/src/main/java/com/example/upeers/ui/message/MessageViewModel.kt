@@ -10,7 +10,7 @@ class MessageViewModel : ViewModel() {
 
     val mydata = listOf<MessageUserInfo>(
         MessageUserInfo(
-            "tutor",
+            "Tutor-CSCI5115",
             "Alex Bradley",
             true,
             "Alex: Hello!",
@@ -18,36 +18,20 @@ class MessageViewModel : ViewModel() {
             R.drawable.alex
         ),
         MessageUserInfo(
-            "tutor",
-            "Alex Bradley",
+            "Tutor-CSCI5521",
+            "Yifan Chi",
             true,
-            "Alex: Hello!",
+            "You: I wonder how ...",
             Date(),
-            R.drawable.alex
+            R.drawable.yifan
         ),
         MessageUserInfo(
-            "tutor",
-            "Alex Bradley",
+            "Tutor-CSCI5619",
+            "Peter Fleck",
             true,
-            "Alex: Hello!",
+            "Fleck: I think you can ...",
             Date(),
-            R.drawable.alex
-        ),
-        MessageUserInfo(
-            "tutor",
-            "Alex Bradley",
-            true,
-            "Alex: Hello!",
-            Date(),
-            R.drawable.alex
-        ),
-        MessageUserInfo(
-            "tutor",
-            "Alex Bradley",
-            true,
-            "Alex: Hello!",
-            Date(),
-            R.drawable.alex
+            R.drawable.fleck
         )
     )
 }

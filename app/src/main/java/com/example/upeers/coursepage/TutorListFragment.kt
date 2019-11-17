@@ -28,8 +28,8 @@ class TutorListFragment : Fragment() {
     ): View? {
         val tutors = listOf<TutorInfo>(
             TutorInfo(R.drawable.alex, "Alex Bradley", "Rate:4.9"),
-            TutorInfo(R.drawable.alex, "Yifan Chi", "Rate:4.8"),
-            TutorInfo(R.drawable.alex, "Peter Fleck", "Rate:4.7")
+            TutorInfo(R.drawable.yifan, "Yifan Chi", "Rate:4.8"),
+            TutorInfo(R.drawable.fleck, "Peter Fleck", "Rate:4.7")
         )
 
         // Inflate the layout for this fragment
