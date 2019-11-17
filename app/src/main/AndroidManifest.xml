@@ -23,16 +23,15 @@
         <activity
             android:name=".msglist.MessageListActivity"
             android:theme="@style/AppTheme_NoActionBar" />
+        <activity android:name=".ui.cs5115SellTextbookConfirm"></activity>
         <activity
             android:name=".msgsearch.MsgSearchActivity"
             android:theme="@style/AppTheme_NoActionBar">
             <intent-filter>
-                <action android:name="android.intent.action.SEARCH" />
+                <action android:name="android.intent.action.SEARCH"/>
             </intent-filter>
-
-            <meta-data
-                android:name="android.app.searchable"
-                android:resource="@xml/searchable" />
+            <meta-data android:name="android.app.searchable"
+                       android:resource="@xml/searchable"/>
         </activity>
         <activity
             android:name=".MainNaviActivity"
@@ -43,6 +42,12 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.upeers.MainActivity" />
         </activity>
+        <activity android:name=".cs5115SellTextbook" />
+        <activity android:name=".cs5115Textbook1Details" />
+        <activity android:name=".cs5115TextbookWishlist" />
+        <activity android:name=".csci5115Textbook1Buy" />
+        <activity android:name=".csci5115BuyTextbook" />
+        <activity android:name=".TextbookMainActivity" />
         <activity
             android:name=".MainActivity"
             android:theme="@style/AppTheme_NoActionBar">
@@ -66,10 +71,6 @@
             >
 
         </activity>
-        <activity
-            android:name=".ui.login.RegisterActivity"
-            android:label="@string/title_activity_register"
-            android:parentActivityName=".MainActivity" />
         <activity android:name=".ui.home.AddCourseActivity" />
     </application>
 
