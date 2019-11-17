@@ -108,7 +108,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <Spinner
-            android:id="@+id/spinner"
+            android:id="@+id/sort_options"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -125,7 +125,7 @@
             android:layout_marginBottom="3dp"
             android:text="@string/sortby"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/spinner"
+            app:layout_constraintEnd_toStartOf="@+id/sort_options"
             app:layout_constraintStart_toEndOf="@+id/results"
             app:layout_constraintTop_toTopOf="parent" />
 

@@ -11,7 +11,7 @@ import com.example.upeers.R
 import kotlinx.android.synthetic.main.layout_book_info_card.view.*
 
 
-class BookListAdaptor(private val myDataSet: List<BookInfo>,
+class BookListAdaptor(var myDataSet: List<BookInfo>,
                       private val context: Context?) : RecyclerView.Adapter<BookListAdaptor.BookInfoViewHolder>() {
     private val DOLLAR: String = "$"
     private val PEOPLE_VIEWED: String = " people have taken a look"
