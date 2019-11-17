@@ -14,8 +14,7 @@ class cs5115TextbookWishlist : AppCompatActivity() {
         setContentView(R.layout.activity_cs5115_textbook_wishlist)
 
         back.setOnClickListener {
-            val intent = Intent(this, cs5115Textbook1Details::class.java)
-            startActivity(intent)
+            finish()
         }
     }
 
