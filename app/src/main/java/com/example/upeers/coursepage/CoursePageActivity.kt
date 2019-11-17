@@ -20,7 +20,7 @@ class CoursePageActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_course_page)
-
+        setTitle("CSCI 5115 Course Page")
         val viewPager = findViewById(R.id.courseViewpager) as ViewPager
         val tabLayout = findViewById<View>(R.id.courseTabLayout) as TabLayout
         tabLayout.setupWithViewPager(viewPager)

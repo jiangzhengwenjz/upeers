@@ -17,6 +17,9 @@ class CourseInfoFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val root = inflater.inflate(R.layout.fragment_course_info_page, container, false)
+
+
+
         return root
     }
 }
