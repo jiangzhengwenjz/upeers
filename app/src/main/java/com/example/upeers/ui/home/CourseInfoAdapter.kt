@@ -12,11 +12,12 @@ class CourseInfoAdapter (private val myDataSet: List<CourseInfo>):
 
     class CourseInfoViewHolder(val CourseInfoView: View): RecyclerView.ViewHolder(CourseInfoView) {
         val courseSubject: TextView = CourseInfoView.findViewById(R.id.course_subject)
-        val courseNumber: TextView = CourseInfoView.findViewById(R.id.course_number)
         val teacherName: TextView = CourseInfoView.findViewById(R.id.teacher_name)
         val year: TextView = CourseInfoView.findViewById(R.id.year)
-        val semester: TextView = CourseInfoView.findViewById(R.id.semester)
         val courseName: TextView = CourseInfoView.findViewById(R.id.course_name)
+        val tutorsandbooks: TextView = CourseInfoView.findViewById(R.id.semester)
+        val threads: TextView = CourseInfoView.findViewById(R.id.semester4)
+        val replies: TextView = CourseInfoView.findViewById(R.id.semester2)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CourseInfoViewHolder {
@@ -30,11 +31,12 @@ class CourseInfoAdapter (private val myDataSet: List<CourseInfo>):
 
     override fun onBindViewHolder(holder: CourseInfoViewHolder, position: Int) {
         holder.courseSubject.text = myDataSet[position].courseSubject
-        holder.courseNumber.text = myDataSet[position].courseNumber.toString()
-        holder.year.text = myDataSet[position].year.toString()
-        holder.semester.text = if (myDataSet[position].isFall) "FALL" else "SPRING"
+        holder.year.text = myDataSet[position].year
         holder.teacherName.text = myDataSet[position].teacherName
         holder.courseName.text = myDataSet[position].courseName
+        holder.tutorsandbooks.text = myDataSet[position].tutorsandbooks
+        holder.threads.text = myDataSet[position].threads
+        holder.replies.text = myDataSet[position].replies
 
         // need to set image here
         // holder.avatar.setImageResource(myDataSet[position].avatar)

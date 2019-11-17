@@ -7,9 +7,13 @@ class HomeViewModel : ViewModel() {
     companion object {
         var mydata = listOf<CourseInfo>(
             CourseInfo(
-                "CSCI", 5115,
+                "CSCI 5115",
                 "Loren Terveen",
-                2019, true, "Intro to UI design"
+                "FALL2019",
+                "Introduction to User Interface design",
+                "33 book copies currently on sale\n2 tutors available at this time",
+                "How do we make user test plan?\nMeeting some problem with android's fragments. Any help?",
+                "8 replies - 22mins ago\n1 reply - 7mins ago"
             )
         )
     }
@@ -20,15 +24,17 @@ class HomeViewModel : ViewModel() {
     fun changeData() {
         mydata = listOf<CourseInfo>(
             CourseInfo(
-                "CSCI", 5115,
+                "CSCI 5115",
                 "Loren Terveen",
-                2019, true, "Intro to UI design"
-            ),
-            CourseInfo(
-                "CSCI", 5115,
-                "Lana Yarosh",
-                2020, false, "Intro to UI design 2"
+                "SPRING2020",
+                "Intro to UI design",
+                "33 book copies currently on sale\n2 tutors available at this time",
+                "How do we make user test plan?\nMeeting some problem with android's fragments. Any help?",
+                "8 replies - 22mins ago\n1 reply - 7mins ago"
             )
+
+
+
         )
     }
 }
