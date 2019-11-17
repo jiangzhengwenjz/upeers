@@ -13,6 +13,7 @@ import androidx.fragment.app.FragmentPagerAdapter
 import com.example.upeers.tutordetail.TutorDetailActivity
 import com.example.upeers.ui.home.CourseInfo
 import com.example.upeers.ui.home.HomeFragment
+import com.example.upeers.ui.book.BookDetailActivity
 
 
 class CoursePageActivity : AppCompatActivity() {
@@ -30,7 +31,7 @@ class CoursePageActivity : AppCompatActivity() {
     private fun setupViewPager(viewPager: ViewPager) {
         val adapter = Adapter(supportFragmentManager)
         adapter.addFragment(CourseInfoFragment(), "Info")
-        adapter.addFragment(CourseInfoFragment(), "Books")
+        adapter.addFragment(BookFragment(), "Books")
         adapter.addFragment(TutorListFragment(), "Tutors")
         adapter.addFragment(CourseInfoFragment(), "Forum")
         viewPager.adapter = adapter
@@ -62,6 +63,18 @@ class CoursePageActivity : AppCompatActivity() {
         val intent = Intent(this, TutorDetailActivity::class.java).apply {
             // should use putExtra here I guess
         }
+        startActivity(intent)
+    }
+
+    fun onClickSellButton(view: View) {
+        val intent = Intent(this, SellNewBookActivity::class.java).apply {}
+
+        startActivity(intent)
+    }
+
+    fun onClickBook(view: View) {
+        val intent = Intent(this, BookDetailActivity::class.java).apply {}
+
         startActivity(intent)
     }
 

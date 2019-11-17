@@ -15,4 +15,12 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello couse info page fragment!</string>
+
+    <string name="sortby">Sort By:</string>
+
+    <string-array name="book_sort_options">
+        <item>Price</item>
+        <item>Views Count</item>
+        <item>Distance</item>
+    </string-array>
 </resources>
