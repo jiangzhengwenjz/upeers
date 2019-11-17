@@ -1,10 +1,15 @@
 package com.example.upeers
 
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
 import android.widget.LinearLayout
+import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.widget.Toolbar
+import androidx.core.content.res.ResourcesCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.upeers.msglist.Message
@@ -55,5 +60,21 @@ class BookMsgList : MessageListActivity() {
         llm.stackFromEnd = true
         mMessageRecycler.layoutManager = llm
         mMessageRecycler.adapter = mMessageListAdapter
+    }
+
+    fun onDealClicked(view: View) {
+        val button = view as Button
+        val builder = AlertDialog.Builder(this)
+        button.setBackgroundColor(Color.parseColor("#999999"))
+        button.setTextColor(Color.parseColor("#444444"))
+        builder.setTitle("You will buy the book")
+        builder.setMessage("Please click CONFIRM to set up this deal")
+        builder.setPositiveButton("CONFIRM"){dialog, which ->
+            // Do something when user press the positive button
+            Toast.makeText(applicationContext,"OK, the deal is made",Toast.LENGTH_SHORT).show()
+        }
+        builder.setNegativeButton("CANCEL"){dialog,which ->
+        }
+
     }
 }

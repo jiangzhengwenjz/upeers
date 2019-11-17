@@ -78,8 +78,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/book_std_img"
-                app:layout_constraintTop_toBottomOf="@+id/book_num_available"
-                android:onClick="onClickSellButton"/>
+                app:layout_constraintTop_toBottomOf="@+id/book_num_available" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
