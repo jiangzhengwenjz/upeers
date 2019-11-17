@@ -17,6 +17,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".BookMsgList"></activity>
         <activity android:name=".coursepage.SellNewBookActivity"></activity>
         <activity android:name=".drawingpad.FakeDrawingPadActivity" />
         <activity android:name=".coursepage.CoursePageActivity" />
@@ -70,7 +71,6 @@
         <activity
             android:name=".tutordetail.TutorDetailActivity"
             android:label="CSCI 5115" />
-            
         <activity android:name=".ui.home.AddCourseActivity" />
         <activity
             android:name=".ui.book.BookDetailActivity"

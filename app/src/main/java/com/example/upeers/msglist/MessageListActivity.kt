@@ -33,19 +33,36 @@ import java.io.File
 import java.util.jar.Manifest
 
 
-class MessageListActivity : AppCompatActivity() {
+open class MessageListActivity : AppCompatActivity() {
     // for call back
-    private val RESULT_LOAD_IMAGE = 1
-    private val PERMISSION_REQUEST_READ_EXT_STORAGE = 8
-    private val PERMISSION_REQUEST_WRITE_EXT_STORAGE = 9
+    protected val RESULT_LOAD_IMAGE = 1
+    protected val PERMISSION_REQUEST_READ_EXT_STORAGE = 8
+    protected val PERMISSION_REQUEST_WRITE_EXT_STORAGE = 9
 
-    private lateinit var mMessageRecycler : RecyclerView
-    private lateinit var mMessageListAdapter: MessageListAdapter
-    private lateinit var chatbox : LinearLayout
-    private lateinit var chattools : LinearLayout
-    private lateinit var messageList: ArrayList<Message>
-    private val userRemote : User = User("Tongyu", R.drawable.alex)
-    private val userMe : User = User("Alex", R.drawable.alex)
+    protected lateinit var mMessageRecycler : RecyclerView
+    protected lateinit var mMessageListAdapter: MessageListAdapter
+    protected lateinit var chatbox : LinearLayout
+    protected lateinit var chattools : LinearLayout
+    // private lateinit var messageList: ArrayList<Message>
+    protected val userRemote : User = User("Tongyu", R.drawable.alex)
+    protected val userMe : User = User("Alex", R.drawable.alex)
+
+    protected var messageList = arrayListOf(
+        Message("As usual", userRemote, System.currentTimeMillis()),
+        Message("Not that much", userMe, System.currentTimeMillis()),
+        Message("As usual", userRemote, System.currentTimeMillis()),
+        Message("Not that much", userMe, System.currentTimeMillis()),
+        Message("As usual", userRemote, System.currentTimeMillis()),
+        Message("Not that much", userMe, System.currentTimeMillis()),
+        Message("As usual", userRemote, System.currentTimeMillis()),
+        Message("Not that much", userMe, System.currentTimeMillis()),
+        Message("As usual", userRemote, System.currentTimeMillis()),
+        Message("As usual", userRemote, System.currentTimeMillis()),
+        Message("As usual", userRemote, System.currentTimeMillis()),
+        Message("As usual", userRemote, System.currentTimeMillis()),
+        Message("Not that much", userMe, System.currentTimeMillis()),
+        Message("Not that much", userMe, System.currentTimeMillis())
+    )
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -58,25 +75,6 @@ class MessageListActivity : AppCompatActivity() {
         chatbox = findViewById<LinearLayout>(R.id.layout_chatbox)
         chattools = findViewById<LinearLayout>(R.id.layout_chattools)
         chattools.visibility = View.INVISIBLE
-
-
-
-        messageList = arrayListOf(
-            Message("As usual", userRemote, System.currentTimeMillis()),
-            Message("Not that much", userMe, System.currentTimeMillis()),
-            Message("As usual", userRemote, System.currentTimeMillis()),
-            Message("Not that much", userMe, System.currentTimeMillis()),
-            Message("As usual", userRemote, System.currentTimeMillis()),
-            Message("Not that much", userMe, System.currentTimeMillis()),
-            Message("As usual", userRemote, System.currentTimeMillis()),
-            Message("Not that much", userMe, System.currentTimeMillis()),
-            Message("As usual", userRemote, System.currentTimeMillis()),
-            Message("As usual", userRemote, System.currentTimeMillis()),
-            Message("As usual", userRemote, System.currentTimeMillis()),
-            Message("As usual", userRemote, System.currentTimeMillis()),
-            Message("Not that much", userMe, System.currentTimeMillis()),
-            Message("Not that much", userMe, System.currentTimeMillis())
-        )
 
         mMessageRecycler = findViewById<RecyclerView>(R.id.recyclerview_msg_list)
         mMessageRecycler.setHasFixedSize(true);
