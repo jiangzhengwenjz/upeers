@@ -1,5 +1,6 @@
 package com.example.upeers.coursepage
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.upeers.R
@@ -9,6 +10,7 @@ import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
+import com.example.upeers.tutordetail.TutorDetailActivity
 import com.example.upeers.ui.home.CourseInfo
 import com.example.upeers.ui.home.HomeFragment
 
@@ -29,7 +31,7 @@ class CoursePageActivity : AppCompatActivity() {
         val adapter = Adapter(supportFragmentManager)
         adapter.addFragment(CourseInfoFragment(), "Info")
         adapter.addFragment(CourseInfoFragment(), "Books")
-        adapter.addFragment(CourseInfoFragment(), "Tutors")
+        adapter.addFragment(TutorListFragment(), "Tutors")
         adapter.addFragment(CourseInfoFragment(), "Forum")
         viewPager.adapter = adapter
     }
@@ -54,6 +56,13 @@ class CoursePageActivity : AppCompatActivity() {
         override fun getPageTitle(position: Int): CharSequence? {
             return mFragmentTitles.get(position)
         }
+    }
+
+    fun onClickTutor(view: View) {
+        val intent = Intent(this, TutorDetailActivity::class.java).apply {
+            // should use putExtra here I guess
+        }
+        startActivity(intent)
     }
 
 }
