@@ -14,9 +14,9 @@ open class MessageUserInfoAdapter(private val myDataSet: List<MessageUserInfo>, 
 
     open class MessageUserInfoViewHolder(val userInfoView: View)  : RecyclerView.ViewHolder(userInfoView) {
         val label: TextView = userInfoView.findViewById(R.id.label)
-        val username: TextView = userInfoView.findViewById(R.id.username)
+        val username: TextView = userInfoView.findViewById(R.id.tutor_name)
         val active: TextView = userInfoView.findViewById(R.id.active)
-        val lastMessage: TextView = userInfoView.findViewById(R.id.lastMessage)
+        val lastMessage: TextView = userInfoView.findViewById(R.id.tutor_rate)
         val avatar: ImageView = userInfoView.findViewById(R.id.tutor_avatar)
     }
 

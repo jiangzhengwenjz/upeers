@@ -12,8 +12,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
-        android:clickable="true"
-        android:onClick="onClickMsgUserCard">
+        android:onClick="onClickTutor"
+        android:clickable="true">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -24,34 +24,18 @@
                 android:id="@+id/tutor_avatar"
                 android:layout_width="@dimen/avatar_dimen"
                 android:layout_height="@dimen/avatar_dimen"
-                android:layout_below="@id/label"
                 android:layout_marginTop="@dimen/margin_top"
                 tools:srcCompat="@tools:sample/avatars" />
-
-            <TextView
-                android:id="@+id/label"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:text="Tutor" />
 
             <TextView
                 android:id="@+id/tutor_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/label"
                 android:layout_marginLeft="@dimen/margin_left"
                 android:layout_marginTop="@dimen/margin_top"
                 android:layout_toRightOf="@id/tutor_avatar"
                 android:text="Alex Bradley"
                 android:textSize="36sp" />
-
-            <TextView
-                android:id="@+id/active"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:text="Active" />
 
             <TextView
                 android:id="@+id/tutor_rate"
@@ -60,8 +44,8 @@
                 android:layout_alignBottom="@id/tutor_avatar"
                 android:layout_marginLeft="@dimen/margin_left"
                 android:layout_toRightOf="@id/tutor_avatar"
-                android:text="Alex: See you on Monday..."
-                android:textSize="18sp" />
+                android:text="Rate: 4.9"
+                android:textSize="24sp" />
         </RelativeLayout>
 
     </androidx.cardview.widget.CardView>

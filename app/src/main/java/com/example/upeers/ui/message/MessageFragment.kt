@@ -37,6 +37,7 @@ class MessageFragment : Fragment() {
             adapter = viewAdapter
         }
 
+
         activity?.invalidateOptionsMenu()
         setHasOptionsMenu(true);
         return root
