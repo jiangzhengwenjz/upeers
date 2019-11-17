@@ -10,13 +10,13 @@ import com.example.upeers.R
 class CourseInfoAdapter (private val myDataSet: List<CourseInfo>):
         RecyclerView.Adapter<CourseInfoAdapter.CourseInfoViewHolder>() {
 
-    class CourseInfoViewHolder(val CourseInfoView: View): RecyclerView.ViewHolder(CourseInfoView) {
-        val courseSubject: TextView = CourseInfoView.findViewById(R.id.course_subject)
-        val courseNumber: TextView = CourseInfoView.findViewById(R.id.course_number)
-        val teacherName: TextView = CourseInfoView.findViewById(R.id.teacher_name)
-        val year: TextView = CourseInfoView.findViewById(R.id.year)
-        val semester: TextView = CourseInfoView.findViewById(R.id.semester)
-        val courseName: TextView = CourseInfoView.findViewById(R.id.course_name)
+    class CourseInfoViewHolder(private val courseInfoView: View): RecyclerView.ViewHolder(courseInfoView) {
+        val courseSubject: TextView = courseInfoView.findViewById(R.id.course_subject)
+        val courseNumber: TextView = courseInfoView.findViewById(R.id.course_number)
+        val teacherName: TextView = courseInfoView.findViewById(R.id.teacher_name)
+        val year: TextView = courseInfoView.findViewById(R.id.year)
+        val semester: TextView = courseInfoView.findViewById(R.id.semester)
+        val courseName: TextView = courseInfoView.findViewById(R.id.course_name)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CourseInfoViewHolder {
