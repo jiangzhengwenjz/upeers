@@ -7,37 +7,44 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".cs5115Textbook1Details"
     tools:showIn="@layout/activity_cs5115_textbook1_details">
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        xmlns:app="http://schemas.android.com/apk/res-auto">
-        <TextView
+        android:orientation="vertical">
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:text="Seller: Jane L"
-            android:textStyle="bold"
-            android:textSize="40dp" />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="50dp"
-            android:text="Price: $10"
-            android:textStyle="bold"
-            android:textSize="40dp" />
-        <Button
+            android:layout_height="match_parent"
+            xmlns:app="http://schemas.android.com/apk/res-auto">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Seller: Jane L"
+                android:textStyle="bold"
+                android:textSize="40dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="50dp"
+                android:text="Price: $10"
+                android:textStyle="bold"
+                android:textSize="40dp" />
+            <Button
 
-            android:id="@+id/back"
-            android:layout_width="150dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="100dp"
-            android:text="Back"
-            android:textSize="25dp" />
-        <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="400dp"
-            android:layout_height="400dp"
-            android:layout_marginTop="200dp"
-            app:srcCompat="@drawable/used_textbook" />
-    </RelativeLayout>
+                android:id="@+id/back"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="100dp"
+                android:text="Back"
+                android:textSize="25dp" />
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="400dp"
+                android:layout_height="400dp"
+                android:layout_marginTop="200dp"
+                app:srcCompat="@drawable/used_textbook" />
+        </RelativeLayout>
+
+    </ScrollView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

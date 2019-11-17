@@ -5,50 +5,56 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.cs5115SellTextbookConfirm">
-    <RelativeLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="400dp"
-            android:layout_height="400dp"
-            android:layout_marginTop="50dp"
-            app:srcCompat="@drawable/texbook1" />
-        <Button
-            android:id="@+id/Notmybook"
-            android:layout_width="150dp"
-            android:layout_height="75dp"
-            android:text="Wrong book"
-            android:layout_marginTop="460dp"
-            android:layout_centerHorizontal="true"
-            android:textSize="20dp" />
-        <Button
-            android:id="@+id/upload"
-            android:layout_width="150dp"
-            android:layout_height="75dp"
-            android:text="Upload"
-            android:layout_marginTop="550dp"
-            android:layout_marginLeft="50dp"
-            android:textSize="20dp" />
-
-        <Button
-            android:id="@+id/addAnother"
-            android:layout_width="150dp"
-            android:layout_height="75dp"
-            android:text="Upload and Add Another"
-            android:layout_marginTop="550dp"
-            android:layout_marginLeft="200dp" />
-
-        <Button
-            android:id="@+id/Cancel2"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="75dp"
-            android:text="Cancel"
-            android:layout_marginTop="640dp"
-            android:layout_marginLeft="250dp"
-            android:textSize="20dp"
-            android:layout_centerHorizontal="true" />
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="400dp"
+                android:layout_height="400dp"
+                android:layout_marginTop="50dp"
+                app:srcCompat="@drawable/texbook1" />
+            <Button
+                android:id="@+id/Notmybook"
+                android:layout_width="150dp"
+                android:layout_height="75dp"
+                android:text="Wrong book"
+                android:layout_marginTop="460dp"
+                android:layout_centerHorizontal="true"
+                android:textSize="20dp" />
+            <Button
+                android:id="@+id/upload"
+                android:layout_width="150dp"
+                android:layout_height="75dp"
+                android:text="Upload"
+                android:layout_marginTop="550dp"
+                android:layout_marginLeft="50dp"
+                android:textSize="20dp" />
 
-    </RelativeLayout>
+            <Button
+                android:id="@+id/addAnother"
+                android:layout_width="150dp"
+                android:layout_height="75dp"
+                android:text="Upload and Add Another"
+                android:layout_marginTop="550dp"
+                android:layout_marginLeft="200dp" />
+
+            <Button
+                android:id="@+id/Cancel2"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:text="Cancel"
+                android:layout_marginTop="640dp"
+                android:layout_marginLeft="250dp"
+                android:textSize="20dp"
+                android:layout_centerHorizontal="true" />
+
+        </RelativeLayout>
+
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

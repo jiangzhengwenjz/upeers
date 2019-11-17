@@ -7,26 +7,31 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".cs5115TextbookWishlist"
     tools:showIn="@layout/activity_cs5115_textbook_wishlist">
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent" android:layout_height="match_parent">
-        <TextView
-            android:layout_width="300dp"
-            android:layout_height="400dp"
-            android:text="Thank you! We will alert you when this book becomes available."
-            android:textStyle="bold"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:textSize="40dp"
-            android:gravity="center"
-            android:background="#FFCC33"/>
-        <Button
-            android:id="@+id/back"
-            android:layout_width="110dp"
-            android:layout_height="50dp"
-            android:text="Back"
-            android:layout_marginTop="660sp"
-            android:layout_centerHorizontal="true"
-            android:textSize="18dp" />
-    </RelativeLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent" android:layout_height="match_parent">
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="400dp"
+                android:text="Thank you! We will alert you when this book becomes available."
+                android:textStyle="bold"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:textSize="40dp"
+                android:gravity="center"
+                android:background="#FFCC33"/>
+            <Button
+                android:id="@+id/back"
+                android:layout_width="110dp"
+                android:layout_height="50dp"
+                android:text="Back"
+                android:layout_marginTop="660sp"
+                android:layout_centerHorizontal="true"
+                android:textSize="18dp" />
+        </RelativeLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,158 +5,146 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".csci5115Textbook1Buy">
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:layout_width="match_parent" android:layout_height="match_parent">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:textStyle="bold"
-            android:text="Seller: Alex Bradley"
-            android:textSize="40dp" />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:textStyle="bold"
-            android:text="Price: $10"
-            android:layout_marginTop="50sp"
-            android:textSize="40dp" />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:textStyle="bold"
-            android:text="Edition: 2"
-            android:layout_marginTop="100sp"
-            android:textSize="40dp" />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:textStyle="bold"
-            android:text="Condition: Good"
-            android:layout_marginTop="150sp"
-            android:textSize="40dp" />
-        <Button
-            android:id="@+id/contactSeller1"
-            android:layout_width="110dp"
-            android:layout_height="100dp"
-            android:text="Contact Seller"
-            android:layout_marginTop="50sp"
-            android:layout_marginLeft="300sp"
-            android:textSize="18dp" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent" android:layout_height="match_parent">
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="7dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="200sp"
-            android:background="#a40404" />
-        <TextView
-            android:layout_marginTop="200sp"
-            android:layout_width="match_parent"
-            android:textStyle="bold"
-            android:layout_height="50dp"
-            android:text="Seller: John Doe"
-            android:textSize="40dp" />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:text="Price: $18"
-            android:textStyle="bold"
-            android:layout_marginTop="250sp"
-            android:textSize="40dp" />
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:text="Edition: 2"
-            android:textStyle="bold"
-            android:layout_marginTop="300sp"
-            android:textSize="40dp" />
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:textStyle="bold"
-            android:text="Condition: Good"
-            android:layout_marginTop="350sp"
-            android:textSize="40dp" />
-        <Button
-            android:id="@+id/contactSeller2"
-            android:layout_width="110dp"
-            android:layout_height="100dp"
-            android:text="Contact Seller"
-            android:layout_marginTop="250sp"
-            android:layout_marginLeft="300sp"
-            android:textSize="18dp" />
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="7dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="400sp"
-            android:background="#a40404" />
-        <TextView
-            android:layout_marginTop="400sp"
-            android:layout_width="match_parent"
-            android:textStyle="bold"
-            android:layout_height="50dp"
-            android:text="Seller: Jane Doe"
-            android:textSize="40dp" />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:text="Price: $20"
-            android:textStyle="bold"
-            android:layout_marginTop="450sp"
-            android:textSize="40dp" />
-        <TextView
-            android:id="@+id/textView7"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:text="Edition: 2"
-            android:textStyle="bold"
-            android:layout_marginTop="500sp"
-            android:textSize="40dp" />
-        <TextView
-            android:id="@+id/textView6"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:textStyle="bold"
-            android:text="Condition: Used"
-            android:layout_marginTop="550sp"
-            android:textSize="40dp" />
-        <Button
-            android:id="@+id/contactSeller3"
-            android:layout_width="110dp"
-            android:layout_height="100dp"
-            android:text="Contact Seller"
-            android:layout_marginTop="450sp"
-            android:layout_marginLeft="300sp"
-            android:textSize="18dp" />
-        <Button
-            android:id="@+id/viewPictures"
-            android:layout_width="110dp"
-            android:layout_height="100dp"
-            android:text="View Pictures"
-            android:layout_marginTop="550sp"
-            android:layout_marginLeft="300sp"
-            android:textSize="18dp" />
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="7dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="650sp"
-            android:background="#a40404" />
-        <Button
-            android:id="@+id/back"
-            android:layout_width="110dp"
-            android:layout_height="50dp"
-            android:text="Back"
-            android:layout_marginTop="660sp"
-            android:layout_centerHorizontal="true"
-            android:textSize="18dp" />
 
-    </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="7dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="200sp"
+                android:background="#a40404" />
+            <TextView
+                android:layout_marginTop="210sp"
+                android:layout_width="match_parent"
+                android:textStyle="bold"
+                android:layout_height="50dp"
+                android:text="Seller: Alex Bradley"
+                android:textSize="35dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Price: $18"
+                android:textStyle="bold"
+                android:layout_marginTop="260sp"
+                android:textSize="35dp" />
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Edition: 2"
+                android:textStyle="bold"
+                android:layout_marginTop="310sp"
+                android:textSize="35dp" />
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textStyle="bold"
+                android:text="Condition: Good"
+                android:layout_marginTop="360sp"
+                android:textSize="35dp" />
+            <Button
+                android:id="@+id/contactSeller2"
+                android:layout_width="110dp"
+                android:layout_height="100dp"
+                android:text="Contact Seller"
+                android:layout_marginTop="250sp"
+                android:layout_marginLeft="300sp"
+                android:textSize="18dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="7dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="420sp"
+                android:background="#a40404" />
+            <TextView
+                android:layout_marginTop="440sp"
+                android:layout_width="match_parent"
+                android:textStyle="bold"
+                android:layout_height="50dp"
+                android:text="Seller: Jane Doe"
+                android:textSize="35dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Price: $20"
+                android:textStyle="bold"
+                android:layout_marginTop="490sp"
+                android:textSize="35dp" />
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Edition: 2"
+                android:textStyle="bold"
+                android:layout_marginTop="540sp"
+                android:textSize="35dp" />
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textStyle="bold"
+                android:text="Condition: Used"
+                android:layout_marginTop="590sp"
+                android:textSize="35dp" />
+            <Button
+                android:id="@+id/contactSeller3"
+                android:layout_width="110dp"
+                android:layout_height="100dp"
+                android:text="Contact Seller"
+                android:layout_marginTop="450sp"
+                android:layout_marginLeft="300sp"
+                android:textSize="18dp" />
+            <Button
+                android:id="@+id/viewPictures"
+                android:layout_width="110dp"
+                android:layout_height="100dp"
+                android:text="View Pictures"
+                android:layout_marginTop="550sp"
+                android:layout_marginLeft="300sp"
+                android:textSize="18dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="7dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="650sp"
+                android:background="#a40404" />
+            <Button
+                android:id="@+id/back"
+                android:layout_width="110dp"
+                android:layout_height="50dp"
+                android:text="Back"
+                android:layout_marginTop="660sp"
+                android:layout_centerHorizontal="true"
+                android:textSize="18dp" />
+            <TextView
+                android:id="@+id/SoftBy"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="45dp"
+                android:entries="@array/Sortby"
+                android:text="Sort By"
+                android:textSize="30sp"/>
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="75dp"
+                android:entries="@array/Sortby"
+                android:textSize="50sp"/>
+
+        </RelativeLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

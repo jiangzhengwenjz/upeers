@@ -12,6 +12,11 @@
     <string name="give_kudos">Give Kudos</string>
     <string name="confirm">Confirm</string>
     <string name="cancel">Cancel</string>
+    <string-array name="Sortby">
+        <item>Price</item>
+        <item>Most recent</item>
+        <item>Condition</item>
+    </string-array>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello couse info page fragment!</string>
