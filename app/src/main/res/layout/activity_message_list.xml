@@ -23,9 +23,10 @@
     <LinearLayout
         android:id="@+id/msg_list_linear_layout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginBottom="55dp"
-        android:orientation="vertical">
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/layout_chattools"
+        app:layout_constraintTop_toBottomOf="@+id/msg_list_toolbar">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerview_msg_list"

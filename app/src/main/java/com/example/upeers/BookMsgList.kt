@@ -67,6 +67,7 @@ class BookMsgList : MessageListActivity() {
         val builder = AlertDialog.Builder(this)
         button.setBackgroundColor(Color.parseColor("#999999"))
         button.setTextColor(Color.parseColor("#444444"))
+        button.text = "Deal Made"
         builder.setTitle("You will buy the book")
         builder.setMessage("Please click CONFIRM to set up this deal")
         builder.setPositiveButton("CONFIRM"){dialog, which ->
