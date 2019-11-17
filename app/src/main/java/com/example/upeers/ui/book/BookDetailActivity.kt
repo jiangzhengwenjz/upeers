@@ -9,7 +9,7 @@ import java.util.ArrayList
 
 class BookDetailActivity  : AppCompatActivity() {
     private var imageModelArrayList: ArrayList<ImageModel>? = null
-    private val myImageList = intArrayOf(R.drawable.textbook1, R.drawable.textbook2, R.drawable.textbook3)
+    private val myImageList = intArrayOf(R.drawable.textbook_preview, R.drawable.textbook_preview_2, R.drawable.textbook_preview_3)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
