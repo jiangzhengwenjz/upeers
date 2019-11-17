@@ -2,6 +2,7 @@ package com.example.upeers.coursepage
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import com.example.upeers.R
 
 class SellNewBookActivity : AppCompatActivity() {
@@ -10,6 +11,9 @@ class SellNewBookActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sell_new_book)
         setTitle("Sell: Add book")
+    }
 
+    fun onClickAddBook(view: View){
+        finish()
     }
 }
