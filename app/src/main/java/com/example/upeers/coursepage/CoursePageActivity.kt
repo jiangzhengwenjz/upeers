@@ -10,6 +10,8 @@ import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
+import com.example.upeers.cs5115SellTextbook
+import com.example.upeers.cs5115TextbookWishlist
 import com.example.upeers.tutordetail.TutorDetailActivity
 import com.example.upeers.ui.home.CourseInfo
 import com.example.upeers.ui.home.HomeFragment
@@ -78,4 +80,14 @@ class CoursePageActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
+
+    fun onClickSellButton2(view: View) {
+        val intent = Intent (this, cs5115TextbookWishlist::class.java).apply {}
+        startActivity(intent)
+    }
+
+    fun onClickSellButton3(view: View) {
+        val intent = Intent (this, cs5115SellTextbook::class.java).apply {}
+        startActivity(intent)
+    }
 }

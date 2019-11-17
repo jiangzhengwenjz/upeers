@@ -1,6 +1,7 @@
 package com.example.upeers.coursepage
 
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -13,6 +14,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 import com.example.upeers.R
+import com.example.upeers.cs5115TextbookWishlist
+import com.example.upeers.ui.home.AddCourseActivity
 
 /**
  * A simple [Fragment] subclass.
@@ -164,4 +167,6 @@ class BookFragment : Fragment() {
     fun notifyViewAdaptor() {
         viewAdaptor.notifyDataSetChanged()
     }
+
+
 }

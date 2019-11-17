@@ -78,13 +78,11 @@ class MainNaviActivity : AppCompatActivity() {
 
     //"add" button. Add a course (namely 5115).
     fun onClickAddCourse(view: View) {
-        val hvm = HomeViewModel()
-        hvm.changeData()
+//        val hvm = HomeViewModel()
+//        hvm.changeData()
         val intent = Intent (this, AddCourseActivity::class.java).apply {}
         startActivity(intent)
         finish()
-
-//        TODO: should auto-refresh the recycler view here.
-//        Something like navHostFragment.getChildFragmentManager().getFragments().get(0);
     }
+
 }
