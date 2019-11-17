@@ -5,15 +5,18 @@
     android:id="@+id/msg_list_constraint_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/msg_list_toolbar"
         android:layout_width="match_parent"
         android:layout_height="@dimen/margin_toolbar"
         android:background="?attr/colorPrimary"
-        app:titleTextColor="@color/colorPrimaryText"
         android:elevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:title="Alex"
-        >
+        app:titleTextColor="@color/colorPrimaryText">
 
     </androidx.appcompat.widget.Toolbar>
 
@@ -78,6 +81,7 @@
             android:layout_width="64dp"
             android:layout_gravity="bottom"
             android:background="?attr/selectableItemBackground"
+            android:onClick="onClickSend"
             android:clickable="true"
             android:gravity="center"
             android:text="SEND"

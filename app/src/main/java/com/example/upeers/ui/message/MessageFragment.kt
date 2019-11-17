@@ -37,10 +37,6 @@ class MessageFragment : Fragment() {
             adapter = viewAdapter
         }
 
-        // val userInfoListView: RecyclerView = root.findViewById(R.id.msg_recycler_view)
-        // messageViewModel.text.observe(this, Observer {
-        //     textView.text = it
-        // })
 
         activity?.invalidateOptionsMenu()
         setHasOptionsMenu(true);

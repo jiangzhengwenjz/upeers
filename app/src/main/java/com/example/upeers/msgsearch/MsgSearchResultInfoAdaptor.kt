@@ -13,9 +13,9 @@ class MsgSearchResultInfoAdaptor(private val myDataSet: List<MsgSearchResultInfo
 
     class MsgSearchResultInfoViewHolder(userInfoView: View) : RecyclerView.ViewHolder(userInfoView) {
         val label: TextView = userInfoView.findViewById(R.id.label)
-        val username: TextView = userInfoView.findViewById(R.id.username)
+        val username: TextView = userInfoView.findViewById(R.id.tutor_name)
         val active: TextView = userInfoView.findViewById(R.id.active)
-        val lastMessage: TextView = userInfoView.findViewById(R.id.lastMessage)
+        val lastMessage: TextView = userInfoView.findViewById(R.id.tutor_rate)
         val avatar: ImageView = userInfoView.findViewById(R.id.tutor_avatar)
         // to display the search result of the messages under one users
         val msgSearchContent : RecyclerView = userInfoView.findViewById(R.id.msg_search_content)
