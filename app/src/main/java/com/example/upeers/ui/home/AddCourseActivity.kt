@@ -16,28 +16,29 @@ class AddCourseActivity : AppCompatActivity() {
         setContentView(R.layout.activity_add_course)
     }
 
-
     fun onClickAddCourse_closeActivity(view:View) {
 //        a pop up alert dialog.
 
-            // build alert dialog
-            val dialogBuilder = AlertDialog.Builder(this)
+        // build alert dialog
+        val dialogBuilder = AlertDialog.Builder(this)
 
-            // set message of alert dialog
-            dialogBuilder.setMessage("Successfully added the course!")
-                // if the dialog is cancelable
-                .setCancelable(false)
-                // positive button text and action
-                .setPositiveButton("Got it", DialogInterface.OnClickListener {
-                        dialog, id -> closeActivity(view)
-                })
+        // set message of alert dialog
+        dialogBuilder.setMessage("Successfully added the course!")
+            // if the dialog is cancelable
+            .setCancelable(false)
+            // positive button text and action
+            .setPositiveButton("Got it", DialogInterface.OnClickListener {
+                    dialog, id -> closeActivity(view)
+            })
 
-            // create dialog box
-            val alert = dialogBuilder.create()
-            // set title for alert dialog box
-            alert.setTitle("Course added")
-            // show alert dialog
-            alert.show()
+        // create dialog box
+        val alert = dialogBuilder.create()
+        // set title for alert dialog box
+        alert.setTitle("Course added")
+        // show alert dialog
+        alert.show()
+        val hvm = HomeViewModel()
+        hvm.changeData()
     }
 
     fun closeActivity(view: View) {

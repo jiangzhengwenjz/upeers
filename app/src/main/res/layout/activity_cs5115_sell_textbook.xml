@@ -4,110 +4,174 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".cs5115SellTextbook"
-    tools:showIn="@layout/activity_cs5115_sell_textbook">
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:layout_width="match_parent" android:layout_height="match_parent">
-
-        <TextView
-            android:id="@+id/textView8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Please provide book information"
-            android:textSize="30dp"
-            android:textStyle="bold"
-            android:layout_centerHorizontal="true"/>
-        <TextView
-            android:id="@+id/textView10"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="100dp"
-            android:text="Course: CSCI 5115"
-            android:textSize="30dp"
-            android:textStyle="bold"
-            android:layout_centerHorizontal="true"/>
-        <EditText
-            android:id="@+id/editText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:layout_marginTop="150dp"
-            android:inputType="textPersonName"
-            android:layout_centerHorizontal="true"
-            android:text="ISBN" />
-        <EditText
-            android:id="@+id/editText2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:layout_marginTop="200dp"
-            android:inputType="textPersonName"
-            android:layout_centerHorizontal="true"
-            android:text="Condition" />
-        <EditText
-            android:id="@+id/editText3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:layout_marginTop="250dp"
-            android:inputType="textPersonName"
-            android:layout_centerHorizontal="true"
-            android:text="Price" />
-
-        <TextView
-            android:id="@+id/textView9"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Please provide images (optional)"
-            android:textSize="30dp"
-            android:textStyle="bold"
-            android:layout_marginTop="350dp"
-            android:layout_centerHorizontal="true"/>
-
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
-            android:layout_marginTop="450dp"
-            android:layout_marginLeft="50dp"
-            app:srcCompat="@android:drawable/ic_input_add" />
-        <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
-            android:layout_marginTop="450dp"
-            android:layout_marginLeft="150dp"
-            app:srcCompat="@android:drawable/ic_input_add" />
-        <ImageView
-            android:id="@+id/imageView5"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
-            android:layout_marginTop="450dp"
-            android:layout_marginLeft="250dp"
-            app:srcCompat="@android:drawable/ic_input_add" />
+    tools:context=".cs5115SellTextbook">
 
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
 
-        <Button
-            android:id="@+id/Go"
-            android:layout_width="150dp"
-            android:layout_height="75dp"
-            android:text="Go"
-            android:layout_marginTop="550dp"
-            android:layout_centerHorizontal="true"
-            android:textSize="20dp" />
-        <Button
-            android:id="@+id/Cancel"
-            android:layout_width="150dp"
-            android:layout_height="75dp"
-            android:text="Cancel"
-            android:layout_marginTop="650dp"
-            android:layout_centerHorizontal="true"
-            android:textSize="20dp" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    </RelativeLayout>
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="16dp"
+                android:layout_marginTop="16dp"
+                android:text="Please provide book information:"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:text="Course: CSCI 5115"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="ISBN"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+            <EditText
+                android:id="@+id/editText2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Condition"
+                app:layout_constraintEnd_toEndOf="@+id/editText"
+                app:layout_constraintStart_toStartOf="@+id/editText"
+                app:layout_constraintTop_toBottomOf="@+id/editText" />
+
+            <EditText
+                android:id="@+id/editText3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Price"
+                app:layout_constraintEnd_toEndOf="@+id/editText2"
+                app:layout_constraintStart_toStartOf="@+id/editText2"
+                app:layout_constraintTop_toBottomOf="@+id/editText2" />
+
+
+            <EditText
+                android:id="@+id/editText4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Edition"
+                app:layout_constraintEnd_toEndOf="@+id/editText2"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/editText2"
+                app:layout_constraintTop_toBottomOf="@+id/editText3" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:text="Please provide images (optional)"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText4" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:background="@color/colorSecondaryLight"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/imageView4"
+                app:layout_constraintTop_toTopOf="@+id/imageView4"
+                app:srcCompat="@drawable/baseline_add_24" />
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:background="@color/colorSecondaryLight"
+                app:layout_constraintEnd_toStartOf="@+id/imageView3"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/imageView5"
+                app:layout_constraintTop_toTopOf="@+id/imageView5"
+                app:srcCompat="@drawable/baseline_add_24" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/colorSecondaryLight"
+                app:layout_constraintEnd_toStartOf="@+id/imageView4"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView9"
+                app:srcCompat="@drawable/baseline_add_24" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/Cancel"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_centerHorizontal="true"
+        android:background="@color/colorSecondary"
+        android:text="Cancel"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/Go"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/Go"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_centerHorizontal="true"
+        android:background="@color/colorPrimary"
+        android:text="Go!"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/Cancel" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

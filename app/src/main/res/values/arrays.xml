@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="numbers">
-        <item>5103</item>
         <item>5115</item>
-        <item>1234</item>
-        <item>5678</item>
-        <item>4321</item>
-        <item>8765</item>
-        <item>3456</item>
+        <item>5521</item>
+        <item>5619</item>
+        <item>8980</item>
     </string-array>
 
     <string-array name="subjects">
@@ -17,15 +14,16 @@
     </string-array>
 
     <string-array name="years">
+        <item>2020</item>
         <item>2019</item>
         <item>2018</item>
         <item>2017</item>
     </string-array>
 
     <string-array name="terms">
-        <item>FALL</item>
         <item>SPRING</item>
         <item>SUMMER</item>
+        <item>FALL</item>
     </string-array>
 
 </resources>
