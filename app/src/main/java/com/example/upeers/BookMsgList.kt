@@ -1,10 +1,16 @@
 package com.example.upeers
 
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
+import android.widget.ImageView
 import android.widget.LinearLayout
+import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.widget.Toolbar
+import androidx.core.content.res.ResourcesCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.upeers.msglist.Message
@@ -31,9 +37,10 @@ class BookMsgList : MessageListActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_book_msg_list)
 
-        val toolbar: Toolbar = findViewById<Toolbar>(R.id.msg_list_toolbar)
-        setSupportActionBar(toolbar)
-
+        // book image setting
+        val bookImageView:ImageView = findViewById(R.id.book_std_img)
+        bookImageView.setImageResource(R.drawable.design_norman)
+        
         // hide chat tool
         chatbox = findViewById<LinearLayout>(R.id.layout_chatbox)
         chattools = findViewById<LinearLayout>(R.id.layout_chattools)
@@ -55,5 +62,27 @@ class BookMsgList : MessageListActivity() {
         llm.stackFromEnd = true
         mMessageRecycler.layoutManager = llm
         mMessageRecycler.adapter = mMessageListAdapter
+    }
+
+    fun onDealClicked(view: View) {
+        val builder = AlertDialog.Builder(this)
+
+        // alert dialog
+        builder.setTitle("You will buy the book")
+        builder.setMessage("Please click CONFIRM to set up this deal")
+        builder.setPositiveButton("CONFIRM"){dialog, which ->
+            // Do something when user press the positive button
+            val button = view as Button
+            button.setBackgroundColor(Color.parseColor("#999999"))
+            button.setTextColor(Color.parseColor("#444444"))
+            button.text = "Deal Made"
+            button.isClickable = false
+
+            Toast.makeText(applicationContext,"OK, the deal is made",Toast.LENGTH_SHORT).show()
+        }
+        builder.setNegativeButton("CANCEL"){dialog,which ->
+        }
+        builder.create().show()
+
     }
 }

@@ -1,11 +1,16 @@
 package com.example.upeers.ui.book
 
+import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.example.upeers.R
 import androidx.viewpager.widget.ViewPager
+import com.example.upeers.BookMsgList
+import com.example.upeers.msglist.MessageListActivity
 import com.viewpagerindicator.CirclePageIndicator
 import java.util.ArrayList
+
 
 class BookDetailActivity  : AppCompatActivity() {
     private var imageModelArrayList: ArrayList<ImageModel>? = null
@@ -62,5 +67,12 @@ class BookDetailActivity  : AppCompatActivity() {
         private var mPager: ViewPager? = null
         private var currentPage = 0
         private var NUM_PAGES = 0
+    }
+
+    fun onClickContact(view: View) {
+        val intent = Intent(this, BookMsgList::class.java).apply {
+            //            should use putExtra here I guess
+        }
+        startActivity(intent)
     }
 }

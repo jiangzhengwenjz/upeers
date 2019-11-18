@@ -9,6 +9,8 @@
     <color name="colorPrimaryText">#ffffff</color>
     <color name="colorSecondaryText">#000000</color>
     <color name="colorAccent">#ffcc33</color> <!--this is same as colorSecondary -->
+    <color name="colorGreyOutDark">#444444</color>
+    <color name="colorGreyOutLight">#999999</color>
 </resources>
 
     <!-- DEFAULT OLD COLORS HERE: <color name="colorPrimary">#008577</color>

@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/msg_list_kudos"
-        android:icon="@drawable/thumbup"
+        android:icon="@drawable/kudos_white"
         android:onClick="onGiveKudosClicked"
         android:title="Give Kudos"
         app:showAsAction="ifRoom" />
