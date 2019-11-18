@@ -37,17 +37,14 @@ class BookMsgList : MessageListActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_book_msg_list)
 
-        val toolbar: Toolbar = findViewById<Toolbar>(R.id.msg_list_toolbar)
-        setSupportActionBar(toolbar)
-
+        // book image setting
+        val bookImageView:ImageView = findViewById(R.id.book_std_img)
+        bookImageView.setImageResource(R.drawable.design_norman)
+        
         // hide chat tool
         chatbox = findViewById<LinearLayout>(R.id.layout_chatbox)
         chattools = findViewById<LinearLayout>(R.id.layout_chattools)
         chattools.visibility = View.INVISIBLE
-
-        // set image for the book
-        val bookPreview : ImageView = findViewById(R.id.book_std_img)
-        bookPreview.setImageResource(R.drawable.design_norman)
 
         messageList = arrayListOf(
             Message("Hi! Your book looks very good. I would like to take it!", userMe, System.currentTimeMillis()),
@@ -68,19 +65,24 @@ class BookMsgList : MessageListActivity() {
     }
 
     fun onDealClicked(view: View) {
-        val button = view as Button
         val builder = AlertDialog.Builder(this)
-        button.setBackgroundColor(Color.parseColor("#999999"))
-        button.setTextColor(Color.parseColor("#444444"))
-        button.text = "Deal Made"
+
+        // alert dialog
         builder.setTitle("You will buy the book")
         builder.setMessage("Please click CONFIRM to set up this deal")
         builder.setPositiveButton("CONFIRM"){dialog, which ->
             // Do something when user press the positive button
+            val button = view as Button
+            button.setBackgroundColor(Color.parseColor("#999999"))
+            button.setTextColor(Color.parseColor("#444444"))
+            button.text = "Deal Made"
+            button.isClickable = false
+
             Toast.makeText(applicationContext,"OK, the deal is made",Toast.LENGTH_SHORT).show()
         }
         builder.setNegativeButton("CANCEL"){dialog,which ->
         }
+        builder.create().show()
 
     }
 }

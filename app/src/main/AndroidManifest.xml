@@ -17,7 +17,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".BookMsgList"></activity>
+        <activity android:name=".BookMsgList"
+            android:theme="@style/AppTheme_NoActionBar">
+        </activity>
         <activity android:name=".coursepage.SellNewBookActivity"></activity>
         <activity android:name=".drawingpad.FakeDrawingPadActivity" />
         <activity android:name=".coursepage.CoursePageActivity" />
