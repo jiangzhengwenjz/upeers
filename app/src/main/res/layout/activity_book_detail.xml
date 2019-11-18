@@ -197,14 +197,15 @@
                         android:textSize="20sp"  />
 
                     <Button
+                        android:id="@+id/ButtonTest"
                         android:layout_width="wrap_content"
                         android:layout_height="20dp"
                         android:layout_marginLeft="10dp"
-                        android:drawableLeft="@drawable/ic_settings_phone_black_24dp"
                         android:background="@drawable/button_bg"
-                        android:textColor="#FFFFFF"
-                        android:id="@+id/ButtonTest"
-                        android:text="Contact" />
+                        android:drawableLeft="@drawable/ic_settings_phone_black_24dp"
+                        android:onClick="onClickContact"
+                        android:text="Contact"
+                        android:textColor="#FFFFFF" />
 
                 </LinearLayout>
 

@@ -44,24 +44,25 @@ open class MessageListActivity : AppCompatActivity() {
     protected lateinit var chatbox : LinearLayout
     protected lateinit var chattools : LinearLayout
     // private lateinit var messageList: ArrayList<Message>
-    protected val userRemote : User = User("Tongyu", R.drawable.alex)
-    protected val userMe : User = User("Alex", R.drawable.alex)
+    protected val userRemote : User = User("Alex", R.drawable.alex)
+    protected val userMe : User = User("Tongyu", R.drawable.alex)
 
     protected var messageList = arrayListOf(
-        Message("As usual", userRemote, System.currentTimeMillis()),
-        Message("Not that much", userMe, System.currentTimeMillis()),
-        Message("As usual", userRemote, System.currentTimeMillis()),
-        Message("Not that much", userMe, System.currentTimeMillis()),
-        Message("As usual", userRemote, System.currentTimeMillis()),
-        Message("Not that much", userMe, System.currentTimeMillis()),
-        Message("As usual", userRemote, System.currentTimeMillis()),
-        Message("Not that much", userMe, System.currentTimeMillis()),
-        Message("As usual", userRemote, System.currentTimeMillis()),
-        Message("As usual", userRemote, System.currentTimeMillis()),
-        Message("As usual", userRemote, System.currentTimeMillis()),
-        Message("As usual", userRemote, System.currentTimeMillis()),
-        Message("Not that much", userMe, System.currentTimeMillis()),
-        Message("Not that much", userMe, System.currentTimeMillis())
+        Message("Hey, how are u", userMe, System.currentTimeMillis()),
+        Message("Great! What's up", userRemote, System.currentTimeMillis()),
+        Message("So, I want to add a recyclerview feature in my APP.", userMe, System.currentTimeMillis()),
+        Message("Have you installed Android Studio", userRemote, System.currentTimeMillis()),
+        Message("Yes", userMe, System.currentTimeMillis()),
+        Message("Ok, great", userRemote, System.currentTimeMillis()),
+        Message("Can you go to the app src? Look at the java directory", userRemote, System.currentTimeMillis()),
+        Message("OK", userMe, System.currentTimeMillis()),
+        Message("Now, can you see the RecyclerDemo.java?", userRemote, System.currentTimeMillis()),
+        Message("Yes", userMe, System.currentTimeMillis()),
+        Message("I can see that", userMe, System.currentTimeMillis()),
+        Message("Now what should I do?", userMe, System.currentTimeMillis()),
+        Message("Just follow the demo you will figure it out. Check the tutorial 3", userRemote, System.currentTimeMillis()),
+        Message("Good luck.", userRemote, System.currentTimeMillis())//,
+        // Message("Alright, thank you", userMe, System.currentTimeMillis())
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {

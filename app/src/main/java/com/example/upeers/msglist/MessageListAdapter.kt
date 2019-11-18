@@ -17,7 +17,7 @@ class MessageListAdapter(private val mContext:Context,
     private val VIEW_TYPE_MESSAGE_SENT = 1
     private val VIEW_TYPE_MESSAGE_RECEIVED = 2
     private val VIEW_TYPE_MESSAGE_IMG_SENT = 3
-    private val ME = "Alex"
+    private val ME = "Tongyu"
 
     open inner class BasicMessageHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val timeText: TextView = itemView.findViewById(R.id.text_message_time)
