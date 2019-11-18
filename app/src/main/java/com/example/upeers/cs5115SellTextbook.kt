@@ -7,6 +7,12 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.upeers.ui.cs5115SellTextbookConfirm
 
 import kotlinx.android.synthetic.main.activity_cs5115_sell_textbook.*
+import android.widget.Toast
+import androidx.core.app.ComponentActivity.ExtraData
+import androidx.core.content.ContextCompat.getSystemService
+import android.icu.lang.UCharacter.GraphemeClusterBreak.T
+
+
 
 class cs5115SellTextbook : AppCompatActivity() {
 
@@ -15,14 +21,18 @@ class cs5115SellTextbook : AppCompatActivity() {
         setContentView(R.layout.activity_cs5115_sell_textbook)
 
         Go.setOnClickListener {
-            val intent = Intent(this, cs5115SellTextbookConfirm::class.java)
-            startActivity(intent)
+            val toast = Toast.makeText(
+                applicationContext,
+                "You made it!",
+                Toast.LENGTH_SHORT
+            )
+            toast.show()
+            finish()
         }
 
 
         Cancel.setOnClickListener {
-            val intent = Intent(this, TextbookMainActivity::class.java)
-            startActivity(intent)
+            finish()
         }
 
     }

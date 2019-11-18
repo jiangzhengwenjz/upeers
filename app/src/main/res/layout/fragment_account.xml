@@ -28,7 +28,7 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="UpeersUser"
+                android:text="UpeersMaster"
                 android:textColor="#fff"
                 android:textStyle="bold"
                 android:textSize="21sp"/>
