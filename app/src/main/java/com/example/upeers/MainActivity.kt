@@ -140,8 +140,4 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, RegisterActivity::class.java).apply {}, ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
     }
 
-    fun onClickTemorary(view: View) {
-        val intent = Intent (this, TextbookMainActivity::class.java).apply {}
-        startActivity(intent)
-    }
 }
