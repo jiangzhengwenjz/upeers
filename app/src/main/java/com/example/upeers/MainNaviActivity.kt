@@ -15,6 +15,7 @@ import androidx.navigation.ui.setupWithNavController
 import com.example.upeers.coursepage.CoursePageActivity
 import com.example.upeers.msglist.MessageListActivity
 import com.example.upeers.msgsearch.MsgSearchActivity
+import com.example.upeers.myselling.MySellingActivity
 import com.example.upeers.ui.home.AddCourseActivity
 import com.example.upeers.ui.home.CourseInfoAdapter
 import com.example.upeers.ui.home.HomeFragment
@@ -85,4 +86,9 @@ class MainNaviActivity : AppCompatActivity() {
         finish()
     }
 
+    fun onClickSellingList(view: View) {
+        val intent = Intent (this, MySellingActivity::class.java).apply {}
+        startActivity(intent)
+        finish()
+    }
 }
