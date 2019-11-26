@@ -17,10 +17,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".BookMsgList"
-            android:theme="@style/AppTheme_NoActionBar">
-        </activity>
-        <activity android:name=".coursepage.SellNewBookActivity"></activity>
+        <activity
+            android:name=".myselling.MySellingActivity"
+            android:theme="@style/AppTheme_NoActionBar"></activity>
+        <activity
+            android:name=".BookMsgList"
+            android:theme="@style/AppTheme_NoActionBar"></activity>
+        <activity android:name=".coursepage.SellNewBookActivity" />
         <activity android:name=".drawingpad.FakeDrawingPadActivity" />
         <activity android:name=".coursepage.CoursePageActivity" />
         <activity android:name=".drawingpad.DrawingPadActivity" />
@@ -59,6 +62,7 @@
             android:theme="@style/AppTheme_NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

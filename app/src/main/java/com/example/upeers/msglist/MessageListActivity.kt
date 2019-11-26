@@ -46,6 +46,8 @@ open class MessageListActivity : AppCompatActivity() {
     // private lateinit var messageList: ArrayList<Message>
     protected val userRemote : User = User("Alex", R.drawable.alex)
     protected val userMe : User = User("Tongyu", R.drawable.alex)
+    protected var counter: Int = 0
+    protected val listOfRandomReply : List<String> = listOf("OK", "Sure", "Cool")
 
     protected var messageList = arrayListOf(
         Message("Hey, how are u", userMe, System.currentTimeMillis()),
@@ -205,11 +207,18 @@ open class MessageListActivity : AppCompatActivity() {
     fun onClickSend(view: View) {
         val editText: EditText = findViewById(R.id.edittext_chatbox)
         val text = editText.text.toString()
+        val randomReply = randomReply()
         editText.text.clear()
         editText.clearFocus()
         messageList.add(Message(text, userMe, System.currentTimeMillis()))
+        messageList.add(Message(randomReply, userRemote, System.currentTimeMillis()))
         // mMessageListAdapter.notifyDataSetChanged()
         mMessageListAdapter.notifyItemInserted(mMessageListAdapter.getItemCount()-1);
         mMessageRecycler.scrollToPosition(mMessageListAdapter.getItemCount()-1);
+    }
+
+    fun randomReply() : String {
+        counter %= 3
+        return listOfRandomReply[counter++]
     }
 }

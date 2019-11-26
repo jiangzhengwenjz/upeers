@@ -40,7 +40,7 @@ class BookMsgList : MessageListActivity() {
         // book image setting
         val bookImageView:ImageView = findViewById(R.id.book_std_img)
         bookImageView.setImageResource(R.drawable.design_norman)
-        
+
         // hide chat tool
         chatbox = findViewById<LinearLayout>(R.id.layout_chatbox)
         chattools = findViewById<LinearLayout>(R.id.layout_chattools)

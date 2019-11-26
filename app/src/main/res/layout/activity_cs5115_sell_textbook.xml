@@ -47,7 +47,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
-                android:id="@+id/editText"
+                android:id="@+id/isbn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
@@ -60,42 +60,42 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
             <EditText
-                android:id="@+id/editText2"
+                android:id="@+id/condition"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:ems="10"
                 android:inputType="textPersonName"
                 android:text="Condition"
-                app:layout_constraintEnd_toEndOf="@+id/editText"
-                app:layout_constraintStart_toStartOf="@+id/editText"
-                app:layout_constraintTop_toBottomOf="@+id/editText" />
+                app:layout_constraintEnd_toEndOf="@+id/isbn"
+                app:layout_constraintStart_toStartOf="@+id/isbn"
+                app:layout_constraintTop_toBottomOf="@+id/isbn" />
 
             <EditText
-                android:id="@+id/editText3"
+                android:id="@+id/price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:ems="10"
                 android:inputType="textPersonName"
                 android:text="Price"
-                app:layout_constraintEnd_toEndOf="@+id/editText2"
-                app:layout_constraintStart_toStartOf="@+id/editText2"
-                app:layout_constraintTop_toBottomOf="@+id/editText2" />
+                app:layout_constraintEnd_toEndOf="@+id/condition"
+                app:layout_constraintStart_toStartOf="@+id/condition"
+                app:layout_constraintTop_toBottomOf="@+id/condition" />
 
 
             <EditText
-                android:id="@+id/editText4"
+                android:id="@+id/edition"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:ems="10"
                 android:inputType="textPersonName"
                 android:text="Edition"
-                app:layout_constraintEnd_toEndOf="@+id/editText2"
+                app:layout_constraintEnd_toEndOf="@+id/condition"
                 app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toStartOf="@+id/editText2"
-                app:layout_constraintTop_toBottomOf="@+id/editText3" />
+                app:layout_constraintStart_toStartOf="@+id/condition"
+                app:layout_constraintTop_toBottomOf="@+id/price" />
 
             <TextView
                 android:id="@+id/textView9"
@@ -108,7 +108,7 @@
                 android:textSize="20dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editText4" />
+                app:layout_constraintTop_toBottomOf="@+id/edition" />
 
             <ImageView
                 android:id="@+id/imageView3"
