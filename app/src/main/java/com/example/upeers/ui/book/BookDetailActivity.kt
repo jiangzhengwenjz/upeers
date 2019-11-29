@@ -3,11 +3,13 @@ package com.example.upeers.ui.book
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.ViewSwitcher
+import android.widget.TextView
+import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 import com.example.upeers.R
 import androidx.viewpager.widget.ViewPager
 import com.example.upeers.BookMsgList
-import com.example.upeers.msglist.MessageListActivity
 import com.viewpagerindicator.CirclePageIndicator
 import java.util.ArrayList
 
@@ -74,5 +76,24 @@ class BookDetailActivity  : AppCompatActivity() {
             //            should use putExtra here I guess
         }
         startActivity(intent)
+    }
+
+    fun onClickEditText(view: View) {
+        val vs1 : ViewSwitcher = findViewById(R.id.vs1)
+        val vs2 : ViewSwitcher = findViewById(R.id.vs2)
+
+        vs1.showNext()
+        vs2.showNext()
+    }
+
+    fun onClickTextView(view: View) {
+        val vs1 : ViewSwitcher = findViewById(R.id.vs1)
+        val vs2 : ViewSwitcher = findViewById(R.id.vs2)
+        val price : TextView = findViewById(R.id.book_detail_price_value)
+        val priceCus : EditText = findViewById(R.id.edit_book_detail_price_value)
+
+        price.text = priceCus.text.toString()
+        vs1.showPrevious()
+        vs2.showPrevious()
     }
 }
