@@ -4,9 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.upeers.R
-import com.example.upeers.TextbookMainActivity
 import com.example.upeers.cs5115SellTextbook
-import kotlinx.android.synthetic.main.activity_cs5115_sell_textbook.*
 import kotlinx.android.synthetic.main.activity_cs5115selltextbookconfirm.*
 
 class cs5115SellTextbookConfirm : AppCompatActivity() {

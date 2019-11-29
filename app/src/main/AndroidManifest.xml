@@ -51,12 +51,11 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.upeers.MainActivity" />
         </activity>
+
         <activity android:name=".cs5115SellTextbook" />
-        <activity android:name=".cs5115Textbook1Details" />
+
         <activity android:name=".cs5115TextbookWishlist" />
-        <activity android:name=".csci5115Textbook1Buy" />
-        <activity android:name=".csci5115BuyTextbook" />
-        <activity android:name=".TextbookMainActivity" />
+
         <activity
             android:name=".MainActivity"
             android:theme="@style/AppTheme_NoActionBar">

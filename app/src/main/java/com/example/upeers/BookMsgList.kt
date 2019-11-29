@@ -49,12 +49,12 @@ class BookMsgList : MessageListActivity() {
         messageList = arrayListOf(
             Message("Hi! Your book looks very good. I would like to take it!", userMe, System.currentTimeMillis()),
             Message("OK! Shall we meet at Keller Hall at 4:30 pm this Tuesday?", userRemote, System.currentTimeMillis()),
-            Message("Sure, see u~", userRemote, System.currentTimeMillis()),
-            Message("See you.", userMe, System.currentTimeMillis())
+            Message("Sure, see u~", userMe, System.currentTimeMillis()),
+            Message("See you.", userRemote, System.currentTimeMillis())
         )
 
         mMessageRecycler = findViewById<RecyclerView>(R.id.recyclerview_msg_list)
-        mMessageRecycler.setHasFixedSize(true);
+        mMessageRecycler.setHasFixedSize(true)
 
         mMessageListAdapter = MessageListAdapter(this, messageList)
         // set sth for layout manager
