@@ -18,7 +18,7 @@
             android:orientation="vertical">
 
             <RelativeLayout
-                android:id="@+id/bookDetailSlider"
+                android:id="@+id/book_detail_slider"
                 android:layout_width="fill_parent"
                 android:layout_height="400dp"
                 android:layout_gravity="center_horizontal"
@@ -59,7 +59,7 @@
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:id="@+id/bookDetailTitle"
+                    android:id="@+id/book_detail_title"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
@@ -78,13 +78,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
-                    android:id="@+id/bookPriceLayout"
-                    app:layout_constraintTop_toBottomOf="@+id/bookDetailTitle"
+                    android:id="@+id/book_price_layout"
+                    app:layout_constraintTop_toBottomOf="@+id/book_detail_title"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent">
 
                     <TextView
-                        android:id="@+id/bookDetailPrice"
+                        android:id="@+id/book_detail_price"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
@@ -94,14 +94,66 @@
                         android:textSize="20sp" />
 
                     <TextView
-                        android:id="@+id/bookDetailPriceValue"
+                        android:id="@+id/book_detail_dollar"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
                         android:layout_marginLeft="16dp"
-                        android:text="$30"
+                        android:text="$"
                         android:textColor="@color/colorPrimary"
                         android:textSize="24sp" />
+
+                    <ViewSwitcher
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/vs1">
+
+                        <TextView
+                            android:id="@+id/book_detail_price_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="30"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="24sp" />
+
+                        <EditText
+                            android:id="@+id/edit_book_detail_price_value"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:hint="30" />
+
+                    </ViewSwitcher>
+
+                    <ViewSwitcher
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/vs2">
+
+                        <Button
+                            android:id="@+id/btn_edit_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/button_bg"
+                            android:drawableLeft="@drawable/ic_mode_edit_black_24dp"
+                            android:onClick="onClickEditText"
+                            android:text="Edit"
+                            android:textColor="#FFFFFF" />
+
+                        <Button
+                            android:id="@+id/btn_fixed_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/button_bg"
+                            android:drawableLeft="@drawable/ic_save_black_24dp"
+                            android:onClick="onClickTextView"
+                            android:text="Save"
+                            android:textColor="#FFFFFF" />
+
+                    </ViewSwitcher>
 
                 </LinearLayout>
 
@@ -110,12 +162,12 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
                     android:id="@+id/bookIsbnLayout"
-                    app:layout_constraintTop_toBottomOf="@+id/bookPriceLayout"
+                    app:layout_constraintTop_toBottomOf="@+id/book_price_layout"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent">
 
                     <TextView
-                        android:id="@+id/bookIsbn"
+                        android:id="@+id/book_isbn"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
@@ -125,7 +177,7 @@
                         android:textSize="20sp" />
 
                     <TextView
-                        android:id="@+id/bookIsbnValue"
+                        android:id="@+id/book_isbn_value"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
@@ -140,13 +192,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
-                    android:id="@+id/bookCondLayout"
+                    android:id="@+id/book_cond_layout"
                     app:layout_constraintTop_toBottomOf="@+id/bookIsbnLayout"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent">
 
                     <TextView
-                        android:id="@+id/bookCond"
+                        android:id="@+id/book_cond"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
@@ -156,7 +208,7 @@
                         android:textSize="20sp" />
 
                     <TextView
-                        android:id="@+id/bookCondValue"
+                        android:id="@+id/book_cond_value"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
@@ -170,9 +222,9 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:id="@+id/bookSellerLayout"
+                    android:id="@+id/book_seller_layout"
                     android:orientation="horizontal"
-                    app:layout_constraintTop_toBottomOf="@+id/bookCondLayout"
+                    app:layout_constraintTop_toBottomOf="@+id/book_cond_layout"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent">
 
@@ -187,7 +239,7 @@
                         android:textSize="20sp" />
 
                     <TextView
-                        android:id="@+id/bookSellerName"
+                        android:id="@+id/book_seller_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
@@ -197,7 +249,7 @@
                         android:textSize="20sp"  />
 
                     <Button
-                        android:id="@+id/ButtonTest"
+                        android:id="@+id/btn_contact"
                         android:layout_width="wrap_content"
                         android:layout_height="20dp"
                         android:layout_marginLeft="10dp"
