@@ -34,6 +34,7 @@
 
             <TextView
                 android:id="@+id/isbn"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_marginStart="24dp"
@@ -93,7 +94,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:ems="10"
-                android:hint="Edition"
+                android:hint="Location"
                 android:inputType="textPersonName"
                 app:layout_constraintBottom_toBottomOf="@+id/textView17"
                 app:layout_constraintStart_toStartOf="@+id/price"
@@ -180,7 +181,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="Edition:"
+                android:text="Location:"
                 app:layout_constraintStart_toStartOf="@+id/textView15"
                 app:layout_constraintTop_toBottomOf="@+id/textView16" />
 
